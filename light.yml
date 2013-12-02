@@ -1,0 +1,26 @@
+---
+# GENERIC COLORS
+red: &RED [180, 80, 80, 255]
+dark: &DARK [91, 84, 81, 255]
+white: &WHITE [255, 255, 255, 200]
+
+# TABS
+__tabsetBackground: [178, 169, 165, 255]
+__tabSettings:
+  __inactive:
+    __textColor: *WHITE
+    __backgroundColor: [255,255,255, 60]
+    __textBold: false
+  __active:
+    __textColor: *DARK
+    __backgroundColor: *WHITE
+    __textBold: false
+  __hover:
+    __textColor: *DARK
+    __backgroundColor: [255, 255, 255, 190]
+    __textBold: false
+
+# SIDEBAR
+__sidebarBackground: [212, 205, 202, 255]
+__sidebarSelectedBackground: *RED
+---

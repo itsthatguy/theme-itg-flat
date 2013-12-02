@@ -1,0 +1,15 @@
+GIT
+  remote: https://github.com/steakknife/mustache.git
+  revision: db00da5c9e42efdf0346a7c0860ccece32b402b0
+  specs:
+    mustache (0.99.4)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  mustache!
