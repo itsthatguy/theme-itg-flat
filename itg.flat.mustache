@@ -100,11 +100,11 @@
     "class": "tab_close_button",
     "content_margin": [10, 0],
     // Tab close default settings
-    "layer0.texture": "Theme - itg/assets/tab-close.png",
+    "layer0.texture": "{{__tabCloseImage}}",
     "layer0.opacity": 1.0,
     "layer0.inner_margin": [0, 0],
     // Tab close hover settings
-    "layer1.texture": "Theme - itg/assets/tab-close-hover.png",
+    "layer1.texture": "{{__tabCloseHoverImage}}",
     "layer1.opacity": 0.0
   },
   {
@@ -587,42 +587,54 @@
     "attributes": ["hover"],
     "layer0.texture": "Theme - itg/assets/file-close-hover.png"
   },
-  // Sidebar group closed
+
+
+{{#__sidebarIcons}}
+
+  {{#__selected}}
+  // Sidebar Selected Folder Icons
+  {
+    "class": "disclosure_button_control",
+    "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+    "layer0.texture": "{{__closed}}"
+  },
+  {
+    "class": "disclosure_button_control",
+    "attributes": ["expanded"],
+    "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+    "layer0.texture": "{{__open}}"
+  },
+  {{/__selected}}
+
+  // Sidebar Deselected Folder Icons
+  {{#__deselected}}
   {
     "class": "disclosure_button_control",
     "content_margin": [0, 6, 18, 7],
-    "layer0.texture": "Theme - itg/assets/group-closed.png",
+    "layer0.texture": "{{__closed}}",
     "layer0.opacity": 1.0,
     "layer0.inner_margin": 0
   },
   {
     "class": "disclosure_button_control",
-    "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-    "layer0.texture": "Theme - itg/assets/group-closed.png"
-  },
-  {
-    "class": "disclosure_button_control",
-    "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-    "layer0.texture": "Theme - itg/assets/group-closed-selected.png"
-  },
-  // Sidebar group open
-  {
-    "class": "disclosure_button_control",
     "attributes": ["expanded"],
-    "layer0.texture": "Theme - itg/assets/group-open.png"
+    "layer0.texture": "{{__open}}"
+  },
+  {
+    "class": "disclosure_button_control",
+    "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+    "layer0.texture": "{{__closed}}"
   },
   {
     "class": "disclosure_button_control",
     "attributes": ["expanded"],
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-    "layer0.texture": "Theme - itg/assets/group-open.png"
+    "layer0.texture": "{{__open}}"
   },
-  {
-    "class": "disclosure_button_control",
-    "attributes": ["expanded"],
-    "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-    "layer0.texture": "Theme - itg/assets/group-open-selected.png"
-  },
+  {{/__deselected}}
+
+{{/__sidebarIcons}}
+
 
 //
 // STANDARD TEXT BUTTONS
