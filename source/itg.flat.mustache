@@ -483,110 +483,121 @@
     "settings": ["itg_sidebar_tree_xlarge"],
     "row_padding": [8, 8]
   },
-  // Sidebar rows
-  {
-    "class": "tree_row",
-    "layer0.tint": {{__sidebarBackground}},
-    "layer0.opacity": 1.0,
-    "layer0.inner_margin": [1,1]
-  },
-  // Sidebar row selected
-  {
-    "class": "tree_row",
-    "layer0.tint": {{__sidebarSelectedBackground}},
-    "layer0.opacity": 1.0,
-    "attributes": ["selected"],
-  },
-  // Sidebar heading
-  {
-    "class": "sidebar_heading",
-    "color": {{__sidebarHeadingTextColor}},
-    "font.bold": true,
-    "shadow_color": [148, 149, 151],
-    "shadow_offset": [0, 0]
-  },
-  // Sidebar entry
-  {
-    "class": "sidebar_label",
-    "color": {{__sidebarTextColor}},
-    "shadow_offset": [0, 0]
-  },
-  // Sidebar folder entry
-  {
-    "class": "sidebar_label",
-    "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
-    "color": {{__sidebarFolderTextColor}},
-    "shadow_color": [0, 0, 0],
-    "shadow_offset": [0, 0]
-  },
-  // Sidebar label (and folder) hover
-  {
-    "class": "sidebar_label",
-    "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-    "color": {{__sidebarHoverTextColor}}
-  },
-  {
-    "class": "sidebar_label",
-    "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
-    "settings": ["bold_folder_labels"],
-    "font.bold": true
-  },
-  // Sidebar entry selected
-  {
-    "class": "sidebar_label",
-    "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-    "color": [255, 255, 255],
-    "shadow_color": [0, 0, 0],
-    "shadow_offset": [0, 0]
-  },
-  // Sidebar file close
-  {
-    "class": "close_button",
-    "layer0.texture": "Theme - itg/assets/file-close.png",
-    "layer0.opacity": 0.0,
-    "layer0.inner_margin": 0,
-    "layer1.texture": "Theme - itg/assets/file-close-selected.png",
-    "layer1.opacity": 0.0,
-    "layer1.inner_margin": 0,
-    "content_margin": [8, 8]
-  },
-  {
-    "class": "close_button",
-    "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-    "layer0.opacity": 1.0,
-    "layer1.opacity": 0.0
-  },
-  {
-    "class": "close_button",
-    "parents": [{"class": "tree_row", "attributes": ["hover", "selected"]}],
-    "layer0.opacity": 0.0,
-    "layer1.opacity": 1.0
-  },
-  // Sidebar file dirty
-  {
-    "class": "close_button",
-    "attributes": ["dirty"],
-    "layer0.texture": "Theme - itg/assets/file-dirty.png",
-    "layer0.opacity": 1.0
-  },
-  {
-    "class": "close_button",
-    "attributes": ["dirty"],
-    "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-    "layer0.texture": "Theme - itg/assets/file-dirty-selected.png"
-  },
-  {
-    "class": "close_button",
-    "attributes": ["dirty"],
-    "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-    "layer0.texture": "Theme - itg/assets/file-close.png"
-  },
-  // Sidebar file close hover
-  {
-    "class": "close_button",
-    "attributes": ["hover"],
-    "layer0.texture": "Theme - itg/assets/file-close-hover.png"
-  },
+
+  {{#__sidebarSettings}}
+    // Sidebar heading
+    {
+      "class": "sidebar_heading",
+      "color": {{__sidebarHeadingTextColor}},
+      "font.bold": true,
+      "shadow_color": [148, 149, 151],
+      "shadow_offset": [0, 0]
+    },
+    {{#__deselected}}
+      // Sidebar Row
+      {
+        "class": "tree_row",
+        "layer0.tint": {{__background}},
+        "layer0.opacity": 1.0,
+        "layer0.inner_margin": [1,1]
+      },
+      // Sidebar entry
+      {
+        "class": "sidebar_label",
+        "color": {{__text}},
+        "shadow_offset": [0, 0]
+      },
+      // Sidebar folder entry
+      {
+        "class": "sidebar_label",
+        "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
+        "color": {{__folderText}},
+        "shadow_color": [0, 0, 0],
+        "shadow_offset": [0, 0]
+      },
+      // Sidebar label (and folder) hover
+      // closed
+      {
+        "class": "sidebar_label",
+        "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+        "color": {{__textHover}}
+      },
+      // open
+      {
+        "class": "sidebar_label",
+        "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
+        "settings": ["bold_folder_labels"],
+        "font.bold": true
+      },
+    {{/__deselected}}
+
+    {{#__selected}}
+      // Sidebar row selected
+      {
+        "class": "tree_row",
+        "layer0.tint": {{__background}},
+        "layer0.opacity": 1.0,
+        "attributes": ["selected"],
+      },
+      // Sidebar entry selected
+      {
+        "class": "sidebar_label",
+        "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+        "color": {{__text}},
+        "shadow_color": [0, 0, 0],
+        "shadow_offset": [0, 0]
+      },
+    {{/__selected}}
+
+    // Sidebar file close
+    {
+      "class": "close_button",
+      "layer0.texture": "Theme - itg/assets/file-close.png",
+      "layer0.opacity": 0.0,
+      "layer0.inner_margin": 0,
+      "layer1.texture": "Theme - itg/assets/file-close-selected.png",
+      "layer1.opacity": 0.0,
+      "layer1.inner_margin": 0,
+      "content_margin": [8, 8]
+    },
+    {
+      "class": "close_button",
+      "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+      "layer0.opacity": 1.0,
+      "layer1.opacity": 0.0
+    },
+    {
+      "class": "close_button",
+      "parents": [{"class": "tree_row", "attributes": ["hover", "selected"]}],
+      "layer0.opacity": 0.0,
+      "layer1.opacity": 1.0
+    },
+    // Sidebar file dirty
+    {
+      "class": "close_button",
+      "attributes": ["dirty"],
+      "layer0.texture": "Theme - itg/assets/file-dirty.png",
+      "layer0.opacity": 1.0
+    },
+    {
+      "class": "close_button",
+      "attributes": ["dirty"],
+      "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+      "layer0.texture": "Theme - itg/assets/file-dirty-selected.png"
+    },
+    {
+      "class": "close_button",
+      "attributes": ["dirty"],
+      "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+      "layer0.texture": "Theme - itg/assets/file-close.png"
+    },
+    // Sidebar file close hover
+    {
+      "class": "close_button",
+      "attributes": ["hover"],
+      "layer0.texture": "Theme - itg/assets/file-close-hover.png"
+    },
+  {{/__sidebarSettings}}
 
 
 {{#__sidebarIcons}}

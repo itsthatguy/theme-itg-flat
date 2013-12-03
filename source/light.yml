@@ -1,8 +1,12 @@
 ---
 # GENERIC COLORS
 red: &RED [180, 80, 80, 255]
+yellow: &YELLOW [254, 209, 0, 255]
+light: &LIGHT [212, 205, 202, 255]
 dark: &DARK [91, 84, 81, 255]
 white: &WHITE [255, 255, 255, 200]
+
+primaryDark: &PRIMARY_DARK [65, 69, 78, 255]
 
 # TABS
 __tabsetBackground: [178, 169, 165, 250]
@@ -25,11 +29,18 @@ __tabCloseHoverIcon: "tab-close-hover.png"
 
 # SIDEBAR
 __sidebarBackground: [212, 205, 202, 255]
-__sidebarSelectedBackground: *RED
-__sidebarTextColor: *DARK
+__sidebarSettings:
+  __selected:
+    __background: *RED
+    __text: *WHITE
+    __textHover: *WHITE
+    __folderText: *WHITE
+  __deselected:
+    __background: *LIGHT
+    __text: *DARK
+    __textHover: *DARK
+    __folderText: *DARK
 __sidebarHeadingTextColor: *DARK
-__sidebarFolderTextColor: *DARK
-__sidebarHoverTextColor: *DARK
 
 __sidebarIconsPath: "Theme - itg/assets/"
 __sidebarIcons:

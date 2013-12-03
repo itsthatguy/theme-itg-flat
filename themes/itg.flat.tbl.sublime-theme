@@ -5,7 +5,7 @@
   // Tab set
   {
     "class": "tabset_control",
-    "layer0.tint": [178, 169, 165, 250],
+    "layer0.tint": [65, 69, 78, 255],
     "layer0.inner_margin": [10, 0],
     "layer0.opacity": 1.0,
     "content_margin": [0, 0, 0, 0],
@@ -48,12 +48,12 @@
   // Inactive Tab
   {
     "class": "tab_control",
-    "layer0.tint": [255, 255, 255, 60]
+    "layer0.tint": [65, 69, 78, 255]
   },
   {
     "class": "tab_label",
     "fade": false,
-    "fg": [91, 84, 81, 255],
+    "fg": [255, 255, 255, 200],
     "font.bold" : false,
     "font.size" : 12,
   },
@@ -75,7 +75,7 @@
   {
     "class": "tab_control",
     "attributes": ["hover"],
-    "layer0.tint": [255, 255, 255, 190]
+    "layer0.tint": [255, 255, 255, 180]
   },
   {
     "class": "tab_label",
@@ -91,11 +91,11 @@
     "class": "tab_close_button",
     "content_margin": [10, 0],
     // Tab close default settings
-    "layer0.texture": "Theme - itg/assets/tab-close.png",
+    "layer0.texture": "Theme - itg/assets/dark/tab-close.png",
     "layer0.opacity": 1.0,
     "layer0.inner_margin": [0, 0],
     // Tab close hover settings
-    "layer1.texture": "Theme - itg/assets/tab-close-hover.png",
+    "layer1.texture": "Theme - itg/assets/dark/tab-close-hover.png",
     "layer1.opacity": 0.0
   },
   {
@@ -351,7 +351,7 @@
 
   {
     "class": "minimap_control",
-    "viewport_color": [255, 255, 255, 200]
+    "viewport_color": [65, 69, 78, 165]
   },
 
 //
@@ -432,7 +432,7 @@
   // Sidebar container
   {
     "class": "sidebar_container",
-    "layer0.tint": [212, 205, 202, 255],
+    "layer0.tint": [65, 69, 78, 255],
     "layer0.opacity": 1.0,
     "layer0.draw_center": false,
     "layer0.inner_margin": [0, 0, 0, 0],
@@ -445,7 +445,7 @@
     "indent": 14,
     "indent_offset": 20,
     "indent_top_level": false,
-    "layer0.tint": [212, 205, 202, 255],
+    "layer0.tint": [65, 69, 78, 255],
     "layer0.opacity": 1.0,
     "dark_content": false
   },
@@ -478,7 +478,7 @@
     // Sidebar heading
     {
       "class": "sidebar_heading",
-      "color": [91, 84, 81, 255],
+      "color": [255, 255, 255, 200],
       "font.bold": true,
       "shadow_color": [148, 149, 151],
       "shadow_offset": [0, 0]
@@ -486,21 +486,21 @@
       // Sidebar Row
       {
         "class": "tree_row",
-        "layer0.tint": [212, 205, 202, 255],
+        "layer0.tint": [65, 69, 78, 255],
         "layer0.opacity": 1.0,
         "layer0.inner_margin": [1,1]
       },
       // Sidebar entry
       {
         "class": "sidebar_label",
-        "color": [91, 84, 81, 255],
+        "color": [255, 255, 255, 200],
         "shadow_offset": [0, 0]
       },
       // Sidebar folder entry
       {
         "class": "sidebar_label",
         "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
-        "color": [91, 84, 81, 255],
+        "color": [255, 255, 255, 200],
         "shadow_color": [0, 0, 0],
         "shadow_offset": [0, 0]
       },
@@ -509,7 +509,7 @@
       {
         "class": "sidebar_label",
         "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-        "color": [91, 84, 81, 255]
+        "color": [255, 255, 255, 200]
       },
       // open
       {
@@ -522,7 +522,7 @@
       // Sidebar row selected
       {
         "class": "tree_row",
-        "layer0.tint": [180, 80, 80, 255],
+        "layer0.tint": [254, 209, 0, 255],
         "layer0.opacity": 1.0,
         "attributes": ["selected"],
       },
@@ -530,7 +530,7 @@
       {
         "class": "sidebar_label",
         "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-        "color": [255, 255, 255, 200],
+        "color": [65, 69, 78, 255],
         "shadow_color": [0, 0, 0],
         "shadow_offset": [0, 0]
       },
@@ -590,38 +590,38 @@
   {
     "class": "disclosure_button_control",
     "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-    "layer0.texture": "Theme - itg/assets/group-closed-selected.png"
+    "layer0.texture": "Theme - itg/assets/dark/group-closed-selected.png"
   },
   {
     "class": "disclosure_button_control",
     "attributes": ["expanded"],
     "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-    "layer0.texture": "Theme - itg/assets/group-open-selected.png"
+    "layer0.texture": "Theme - itg/assets/dark/group-open-selected.png"
   },
 
   // Sidebar Deselected Folder Icons
   {
     "class": "disclosure_button_control",
     "content_margin": [0, 6, 18, 7],
-    "layer0.texture": "Theme - itg/assets/group-closed.png",
+    "layer0.texture": "Theme - itg/assets/dark/group-closed.png",
     "layer0.opacity": 1.0,
     "layer0.inner_margin": 0
   },
   {
     "class": "disclosure_button_control",
     "attributes": ["expanded"],
-    "layer0.texture": "Theme - itg/assets/group-open.png"
+    "layer0.texture": "Theme - itg/assets/dark/group-open.png"
   },
   {
     "class": "disclosure_button_control",
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-    "layer0.texture": "Theme - itg/assets/group-closed.png"
+    "layer0.texture": "Theme - itg/assets/dark/group-closed.png"
   },
   {
     "class": "disclosure_button_control",
     "attributes": ["expanded"],
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-    "layer0.texture": "Theme - itg/assets/group-open.png"
+    "layer0.texture": "Theme - itg/assets/dark/group-open.png"
   },
 
 
