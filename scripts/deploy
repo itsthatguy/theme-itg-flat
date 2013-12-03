@@ -1,0 +1,10 @@
+#!/bin/bash
+export DEVELOPMENT=master
+export PRODUCTION=themes
+
+git checkout $DEVELOPMENT
+git checkout $PRODUCTION
+git pull
+git show $DEVELOPMENT:$1 > $2
+git commit -am $3
+git push themes
