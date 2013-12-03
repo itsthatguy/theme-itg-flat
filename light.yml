@@ -24,6 +24,7 @@ __tabSettings:
 __sidebarBackground: [212, 205, 202, 255]
 __sidebarSelectedBackground: *RED
 __sidebarTextColor: *WHITE
+__sidebarHeadingTextColor: *WHITE
 __sidebarFolderTextColor: *WHITE
 __sidebarHoverTextColor: *WHITE
 

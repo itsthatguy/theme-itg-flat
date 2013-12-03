@@ -491,7 +491,7 @@
   // Sidebar heading
   {
     "class": "sidebar_heading",
-    "color": [91, 84, 81],
+    "color": [255, 255, 255, 200],
     "font.bold": true,
     "shadow_color": [148, 149, 151],
     "shadow_offset": [0, 0]

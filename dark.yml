@@ -9,7 +9,7 @@ __tabsetBackground: [65, 69, 78, 255]
 __tabSettings:
   __inactive:
     __textColor: *WHITE
-    __backgroundColor: [255,255,255, 60]
+    __backgroundColor: [255, 255, 255, 60]
     __textBold: false
   __active:
     __textColor: *DARK
@@ -24,6 +24,7 @@ __tabSettings:
 __sidebarBackground: [65, 69, 78, 255]
 __sidebarSelectedBackground: *RED
 __sidebarTextColor: *WHITE
+__sidebarHeadingTextColor: [0, 255, 0, 255]
 __sidebarFolderTextColor: *WHITE
 __sidebarHoverTextColor: *WHITE
 
