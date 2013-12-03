@@ -75,7 +75,7 @@
   {
     "class": "tab_control",
     "attributes": ["hover"],
-    "layer0.tint": [255, 255, 255, 190]
+    "layer0.tint": [255, 255, 255, 180]
   },
   {
     "class": "tab_label",

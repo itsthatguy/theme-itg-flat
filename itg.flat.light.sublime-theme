@@ -53,7 +53,7 @@
   {
     "class": "tab_label",
     "fade": false,
-    "fg": [255, 255, 255, 200],
+    "fg": [91, 84, 81, 255],
     "font.bold" : false,
     "font.size" : 12,
   },

@@ -100,11 +100,11 @@
     "class": "tab_close_button",
     "content_margin": [10, 0],
     // Tab close default settings
-    "layer0.texture": "{{__tabCloseImage}}",
+    "layer0.texture": "{{__tabCloseIconPath}}{{__tabCloseIcon}}",
     "layer0.opacity": 1.0,
     "layer0.inner_margin": [0, 0],
     // Tab close hover settings
-    "layer1.texture": "{{__tabCloseHoverImage}}",
+    "layer1.texture": "{{__tabCloseIconPath}}{{__tabCloseHoverIcon}}",
     "layer1.opacity": 0.0
   },
   {
@@ -596,13 +596,13 @@
   {
     "class": "disclosure_button_control",
     "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-    "layer0.texture": "{{__closed}}"
+    "layer0.texture": "{{__sidebarIconsPath}}{{__closed}}"
   },
   {
     "class": "disclosure_button_control",
     "attributes": ["expanded"],
     "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-    "layer0.texture": "{{__open}}"
+    "layer0.texture": "{{__sidebarIconsPath}}{{__open}}"
   },
   {{/__selected}}
 
@@ -611,25 +611,25 @@
   {
     "class": "disclosure_button_control",
     "content_margin": [0, 6, 18, 7],
-    "layer0.texture": "{{__closed}}",
+    "layer0.texture": "{{__sidebarIconsPath}}{{__closed}}",
     "layer0.opacity": 1.0,
     "layer0.inner_margin": 0
   },
   {
     "class": "disclosure_button_control",
     "attributes": ["expanded"],
-    "layer0.texture": "{{__open}}"
+    "layer0.texture": "{{__sidebarIconsPath}}{{__open}}"
   },
   {
     "class": "disclosure_button_control",
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-    "layer0.texture": "{{__closed}}"
+    "layer0.texture": "{{__sidebarIconsPath}}{{__closed}}"
   },
   {
     "class": "disclosure_button_control",
     "attributes": ["expanded"],
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-    "layer0.texture": "{{__open}}"
+    "layer0.texture": "{{__sidebarIconsPath}}{{__open}}"
   },
   {{/__deselected}}
 

@@ -17,10 +17,11 @@ __tabSettings:
     __textBold: false
   __hover:
     __textColor: *DARK
-    __backgroundColor: [255, 255, 255, 190]
+    __backgroundColor: [255, 255, 255, 180]
     __textBold: false
-__tabCloseImage: "Theme - itg/assets/dark/tab-close.png"
-__tabCloseHoverImage: "Theme - itg/assets/dark/tab-close-hover.png"
+__tabCloseIconPath: "Theme - itg/assets/dark/"
+__tabCloseIcon: "tab-close.png"
+__tabCloseHoverIcon: "tab-close-hover.png"
 
 # SIDEBAR
 __sidebarBackground: [65, 69, 78, 255]
@@ -30,13 +31,14 @@ __sidebarHeadingTextColor: *WHITE
 __sidebarFolderTextColor: *WHITE
 __sidebarHoverTextColor: *WHITE
 
+__sidebarIconsPath: "Theme - itg/assets/dark/"
 __sidebarIcons:
   __selected:
-    __open: "Theme - itg/assets/dark/group-open-selected.png"
-    __closed: "Theme - itg/assets/dark/group-closed-selected.png"
+    __open: "group-open-selected.png"
+    __closed: "group-closed-selected.png"
   __deselected:
-    __open: "Theme - itg/assets/dark/group-open.png"
-    __closed: "Theme - itg/assets/dark/group-closed.png"
+    __open: "group-open.png"
+    __closed: "group-closed.png"
 
 
 # MINIMAP
