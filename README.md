@@ -1,4 +1,4 @@
-# ITG - sublime themes
+# itg - sublime themes
 
 This is currently a work in progress. Please excuse the current condition.
 
