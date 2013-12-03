@@ -5,7 +5,7 @@
   // Tab set
   {
     "class": "tabset_control",
-    "layer0.tint": [178, 169, 165, 250],
+    "layer0.tint": [65, 69, 78, 255],
     "layer0.inner_margin": [10, 0],
     "layer0.opacity": 1.0,
     "content_margin": [0, 0, 0, 0],
@@ -351,7 +351,7 @@
 
   {
     "class": "minimap_control",
-    "viewport_color": [255, 255, 255, 200]
+    "viewport_color": [65, 69, 78, 165]
   },
 
 //
@@ -432,7 +432,7 @@
   // Sidebar container
   {
     "class": "sidebar_container",
-    "layer0.tint": [212, 205, 202, 255],
+    "layer0.tint": [65, 69, 78, 255],
     "layer0.opacity": 1.0,
     "layer0.draw_center": false,
     "layer0.inner_margin": [0, 0, 0, 0],
@@ -445,7 +445,7 @@
     "indent": 14,
     "indent_offset": 20,
     "indent_top_level": false,
-    "layer0.tint": [212, 205, 202, 255],
+    "layer0.tint": [65, 69, 78, 255],
     "layer0.opacity": 1.0,
     "dark_content": false
   },
@@ -477,7 +477,7 @@
   // Sidebar rows
   {
     "class": "tree_row",
-    "layer0.tint": [212, 205, 202, 255],
+    "layer0.tint": [65, 69, 78, 255],
     "layer0.opacity": 1.0,
     "layer0.inner_margin": [1,1]
   },

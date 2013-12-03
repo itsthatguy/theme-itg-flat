@@ -360,7 +360,7 @@
 
   {
     "class": "minimap_control",
-    "viewport_color": [61, 142, 243, 20]
+    "viewport_color": {{__minimapBackground}}
   },
 
 //
@@ -508,14 +508,14 @@
   // Sidebar entry
   {
     "class": "sidebar_label",
-    "color": [111, 104, 101],
+    "color": {{__sidebarTextColor}},
     "shadow_offset": [0, 0]
   },
   // Sidebar folder entry
   {
     "class": "sidebar_label",
     "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
-    "color": [111, 104, 101],
+    "color": {{__sidebarFolderTextColor}},
     "shadow_color": [0, 0, 0],
     "shadow_offset": [0, 0]
   },
@@ -523,7 +523,7 @@
   {
     "class": "sidebar_label",
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-    "color": [91, 84, 81]
+    "color": {{__sidebarHoverTextColor}}
   },
   {
     "class": "sidebar_label",

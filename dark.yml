@@ -5,7 +5,7 @@ dark: &DARK [91, 84, 81, 255]
 white: &WHITE [255, 255, 255, 200]
 
 # TABS
-__tabsetBackground: [178, 169, 165, 250]
+__tabsetBackground: [65, 69, 78, 255]
 __tabSettings:
   __inactive:
     __textColor: *WHITE
@@ -21,7 +21,7 @@ __tabSettings:
     __textBold: false
 
 # SIDEBAR
-__sidebarBackground: [212, 205, 202, 255]
+__sidebarBackground: [65, 69, 78, 255]
 __sidebarSelectedBackground: *RED
 __sidebarTextColor: *WHITE
 __sidebarFolderTextColor: *WHITE
@@ -29,6 +29,5 @@ __sidebarHoverTextColor: *WHITE
 
 
 # MINIMAP
-__minimapBackground: *WHITE
-
+__minimapBackground: [65, 69, 78, 165]
 ---
