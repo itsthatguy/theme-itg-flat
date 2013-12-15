@@ -3,11 +3,11 @@
 Note: Installation instruction pending addition to the sublime text package control.
 
 If you're feeling adventurous, you can add this repository to your
-`Sublime Text/Local Packages/` folder and enable it in your user settings.
+`Sublime Text/Local Packages/` folder and enable it in your user settings (`Preferences.user-settings`).
 
 ##### Add one of the following to your user-settings file.
 
-```json
+```javascript
 // for a dark theme use:
 "theme": "itg.flat.dark.sublime-theme"
 
