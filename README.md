@@ -1,6 +1,6 @@
 # Theme - itg.flat
 
-Note: Installation instruction pending addition to the sublime text package control.
+Note: Theme added to the official package control channel. Instructions to be added once the channel file is updated.
 
 
 ## Dark
