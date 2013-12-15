@@ -1,6 +1,6 @@
 # Theme - itg.flat
 
-Note: Theme added to the official package control channel. Instructions to be added once the channel file is updated.
+_Note: Theme added to the official package control channel. Instructions to be added once the channel file is updated._
 
 
 ## Dark
