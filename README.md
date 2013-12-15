@@ -6,7 +6,7 @@ My flat, retina friendly, sublime-theme.  It comes in two flavors, Dark and Ligh
 
 Installation is a snap. Once you have [Package Control](https://sublime.wbond.net/installation) installed, you just need to follow the instructions below.
 
-I hope you enjoy it, and let me know your thoughts.
+I hope you enjoy it. I'd love to hear your thoughts.
 
 ### Dark
 
