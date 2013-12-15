@@ -7,7 +7,7 @@ Sublime Text/Local Packages/ folder and enable it in your user settings.
 
 ##### Add one of the following to your user-settings file.
 
-```
+```json
 // for a dark theme use:
 "theme": "itg.flat.dark.sublime-theme"
 
