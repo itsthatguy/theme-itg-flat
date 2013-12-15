@@ -1,8 +1,5 @@
 # Theme - itg.flat
 
-_Note: Theme added to the official package control channel. Instructions to be added once the channel file is updated._
-
-
 ## Dark
 
 ![](https://www.evernote.com/shard/s117/sh/e6e55372-e4f3-46c7-b4d4-3854ddb87cb2/920289d4ced10498fea9dde651c9abc9/deep/0/Pasted-Image-12-15-13,-12-51-AM.jpg)
