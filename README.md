@@ -1,5 +1,7 @@
 # Theme - itg.flat
 
+*Note: This theme is currently only working with Sublime Text 3. I'll be resolving this soon.* 
+
 ## Here it is
 
 My flat, retina friendly, sublime-theme.  It comes in two flavors, Dark and Light. I'll be adding more color variations over the coming weeks, so stay tuned.
