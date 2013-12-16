@@ -33,7 +33,7 @@
     "content_margin": [28, 6, 28, 4],
     "max_margin_trim": 0,
     "hit_test_level": 0.0,
-    "layer0.texture": "Theme - itg.flat/assets/blank.png",
+    "layer0.texture": "",
     "layer0.opacity": 1.0,
     "layer1.opacity": 0.0,
     "layer2.opacity": 0.0
