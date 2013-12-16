@@ -33,7 +33,7 @@
     "content_margin": [28, 6, 28, 4],
     "max_margin_trim": 0,
     "hit_test_level": 0.0,
-    "layer0.texture": "",
+    "layer0.texture": "Theme - itg.flat/assets/blank.png",
     "layer0.opacity": 1.0,
     "layer1.opacity": 0.0,
     "layer2.opacity": 0.0
@@ -67,7 +67,7 @@
     "fade": false,
     "fg": [91, 84, 81, 255],
     "font.bold" : false,
-    "font.size" : 12,
+    "font.size" : 12
   },
 
   // Active Tab
@@ -80,7 +80,7 @@
     "class": "tab_label",
     "parents": [{"class": "tab_control", "attributes": ["selected"]}],
     "fg": [91, 84, 81, 255],
-    "font.bold" : false,
+    "font.bold" : false
   },
 
   // Hover Tab
@@ -113,7 +113,7 @@
     "layer3.texture": "",
     "layer1.opacity": 0.0,
     "layer2.opacity": 0.0,
-    "layer3.opacity": 0.0,
+    "layer3.opacity": 0.0
   },
   {
     // Tab button size
@@ -125,27 +125,27 @@
     "class": "tab_close_button",
     "parents": [{"class": "tab_control", "attributes": ["hover"]}],
     "layer0.tint": [91, 84, 81, 255],
-    "layer0.opacity": 1.0,
+    "layer0.opacity": 1.0
   },
   {
     "class": "tab_close_button",
     "parents": [{"class": "tab_control", "attributes": ["selected"]}],
     "layer0.tint": [91, 84, 81, 255],
-    "layer0.opacity": 1.0,
+    "layer0.opacity": 1.0
   },
   {
     "class": "tab_close_button",
     "parents": [{"class": "tab_control", "attributes": ["selected", "hover"]}],
     "layer0.tint": [91, 84, 81, 255],
-    "layer0.opacity": 1.0,
+    "layer0.opacity": 1.0
   },
   {
     // Tab close button hover
     "class": "tab_close_button",
     "attributes": ["hover"],
     "parents": [{"class": "tab_control", "attributes": ["hover"]}],
-    "layer0.tint": [180, 80, 80, 255],
-    // "layer0.opacity": 1.0,
+    "layer0.tint": [180, 80, 80, 255]
+    // "layer0.opacity": 1.0
   },
   // Tab dirty button
   {
@@ -153,7 +153,7 @@
     "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
     "layer0.texture": "Theme - itg.flat/assets/file-dirty.png",
     "layer0.tint": [220, 150, 0],
-    "layer0.opacity": 1.0,
+    "layer0.opacity": 1.0
   },
 
   // Tab dirty button selected hover
@@ -162,7 +162,7 @@
     "parents": [{"class": "tab_control", "attributes": ["dirty", "selected"]}],
     "layer0.texture": "Theme - itg.flat/assets/file-dirty.png",
     "layer0.tint": [220, 150, 0],
-    "layer0.opacity": 1.0,
+    "layer0.opacity": 1.0
   },
   // Tab dirty button hover
   {
@@ -170,7 +170,7 @@
     "parents": [{"class": "tab_control", "attributes": ["dirty", "hover"]}],
     "layer0.texture": "Theme - itg.flat/assets/file-dirty.png",
     "layer0.tint": [220, 150, 0],
-    "layer0.opacity": 1.0,
+    "layer0.opacity": 1.0
   },
   {
     // Tab dirty icon hover
@@ -179,7 +179,7 @@
     "attributes": ["hover"],
     "layer0.texture": "Theme - itg.flat/assets/close.png",
     "layer0.tint": [180, 80, 80, 255],
-    "layer0.opacity": 1.0,
+    "layer0.opacity": 1.0
   },
   // {
   //   // Tab dirty button active
@@ -201,22 +201,21 @@
     "class": "tab_close_button",
     "settings": ["!show_tab_close_buttons", "highlight_modified_tabs"],
     "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
-    "content_margin": [8, 8],
+    "content_margin": [8, 8]
   },
 
   // SMALL TABS
   {
     "class": "tabset_control",
     "settings": ["itg_small_tabs"],
-    "tab_height": 32,
+    "tab_height": 32
   },
   // SQUARE TABS
   {
     "class": "tabset_control",
     "settings": ["itg_square_tabs"],
     "layer0.texture": "",
-    "content_margin": [0, 0, 0, 0],
-    // "tab_overlap": 5
+    "content_margin": [0, 0, 0, 0]
   },
   {
     "class": "tab_control",
@@ -246,12 +245,12 @@
   {
     "class": "fold_button_control",
     "attributes": ["hover"],
-    "layer0.opacity": 1.0,
+    "layer0.opacity": 1.0
   },
   {
     "class": "fold_button_control",
     "attributes": ["pressed"],
-    "layer0.opacity": 1.0,
+    "layer0.opacity": 1.0
   },
   {
     "class": "fold_button_control",
@@ -372,14 +371,14 @@
     "class": "puck_control",
     "settings": ["overlay_scroll_bars"],
     "attributes": ["dark"],
-    "layer0.tint": [255, 255, 255, 200],
+    "layer0.tint": [255, 255, 255, 200]
   },
   // Overlay light horizontal puck (for dark content)
   {
     "class": "puck_control",
     "settings": ["overlay_scroll_bars"],
     "attributes": ["horizontal", "dark"],
-    "layer0.tint": [255, 255, 255, 200],
+    "layer0.tint": [255, 255, 255, 200]
   },
 
 //
@@ -592,7 +591,7 @@
     "color": [255, 255, 255, 200],
     "layer0.tint": [0, 0, 0, 30],
     "layer0.opacity": 1.0,
-    "attributes": ["hover"],
+    "attributes": ["hover"]
   },
 
   // :: SELECTED
@@ -601,7 +600,7 @@
     "class": "tree_row",
     "layer0.tint": [180, 80, 80, 255],
     "layer0.opacity": 1.0,
-    "attributes": ["selected"],
+    "attributes": ["selected"]
   },
   // Sidebar entry selected
   {
@@ -635,7 +634,7 @@
     "class": "close_button",
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
     "layer0.opacity": 0.4,
-    "layer0.tint": [91, 84, 81, 255],
+    "layer0.tint": [91, 84, 81, 255]
   },
 
   // > ROW :: HOVER
@@ -645,7 +644,7 @@
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
     "attributes": ["hover"],
     "layer0.tint": [180, 80, 80, 255],
-    "layer0.opacity": 1.0,
+    "layer0.opacity": 1.0
   },
 
   // > ROW :: SELECTED
@@ -654,7 +653,7 @@
     "class": "close_button",
     "parents": [{"class": "tree_row", "attributes": ["selected"]}],
     "layer0.tint": [255, 255, 255, 200],
-    "layer0.opacity": 0.6,
+    "layer0.opacity": 0.6
   },
 
   // > ROW :: SELECTED :: HOVER
@@ -664,7 +663,7 @@
     "parents": [{"class": "tree_row", "attributes": ["hover", "selected"]}],
     "attributes": ["hover"],
     "layer0.tint": [255, 255, 255, 200],
-    "layer0.opacity": 1.0,
+    "layer0.opacity": 1.0
   },
   // Sidebar file dirty
   {
@@ -672,7 +671,7 @@
     "attributes": ["dirty"],
     "layer0.texture": "Theme - itg.flat/assets/file-dirty.png",
     "layer0.tint": [220, 150, 0],
-    "layer0.opacity": 1.0,
+    "layer0.opacity": 1.0
   },
   {
     "class": "close_button",
@@ -680,27 +679,27 @@
     "parents": [{"class": "tree_row", "attributes": ["selected"]}],
     "layer0.texture": "Theme - itg.flat/assets/file-dirty.png",
     "layer0.tint": [254, 209, 0, 255],
-    "layer0.opacity": 1.0,
+    "layer0.opacity": 1.0
   },
 
   {
     "class": "close_button",
     "attributes": ["dirty"],
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-    "layer0.texture": "Theme - itg.flat/assets/close.png",
+    "layer0.texture": "Theme - itg.flat/assets/close.png"
   },
   {
     "class": "close_button",
     "attributes": ["hover", "dirty"],
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
     "layer0.texture": "Theme - itg.flat/assets/close.png",
-    "layer0.tint": [180, 80, 80, 255],
+    "layer0.tint": [180, 80, 80, 255]
   },
   {
     "class": "close_button",
     "attributes": ["dirty", "hover"],
     "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-    "layer0.tint": [255, 255, 255, 200],
+    "layer0.tint": [255, 255, 255, 200]
   },
 
   //
@@ -722,7 +721,7 @@
   // :: CLOSED :: HOVER
   {
     "class": "disclosure_button_control",
-    "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+    "parents": [{"class": "tree_row", "attributes": ["hover"]}]
   },
 
   //
@@ -738,7 +737,7 @@
   {
     "class": "disclosure_button_control",
     "attributes": ["expanded"],
-    "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+    "parents": [{"class": "tree_row", "attributes": ["hover"]}]
   },
 
   //
@@ -753,7 +752,7 @@
   {
     "class": "disclosure_button_control",
     "attributes": ["expanded"],
-    "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+    "parents": [{"class": "tree_row", "attributes": ["selected"]}]
   },
 
 
@@ -780,7 +779,7 @@
     // Pressed button state
     "class": "button_control",
     "attributes": ["hover"],
-    "layer0.tint": [0, 0, 0, 30],
+    "layer0.tint": [0, 0, 0, 30]
   },
   {
     // Pressed button state
@@ -822,7 +821,7 @@
     "layer0.texture": "",
     "layer0.tint": [212, 205, 202, 255],
     "layer0.inner_margin": [2, 2, 2, 5],
-    "layer0.opacity": 1.0,
+    "layer0.opacity": 1.0
   },
   // Quick panel background
   {
@@ -865,7 +864,7 @@
     "class": "quick_panel_row",
     "attributes": ["selected"],
     "layer0.texture": "",
-    "layer0.tint": [180, 80, 80, 255],
+    "layer0.tint": [180, 80, 80, 255]
   },
   {
     "class": "quick_panel_label",
@@ -902,7 +901,7 @@
     "class": "mini_quick_panel_row",
     "attributes": ["selected"],
     "layer0.texture": "",
-    "layer0.tint": [180, 80, 80, 255],
+    "layer0.tint": [180, 80, 80, 255]
   },
 
 //
@@ -963,13 +962,13 @@
     "class": "icon_button_control",
     "attributes": ["hover"],
     "layer0.texture": "",
-    "layer0.tint": [0, 0, 0, 30],
+    "layer0.tint": [0, 0, 0, 30]
   },
   // :: HOVER :: SELECTED
   {
     "class": "icon_button_control",
     "attributes": ["selected", "hover"],
-    "layer0.tint": [180, 80, 80, 255],
+    "layer0.tint": [180, 80, 80, 255]
   },
   // :: SELECTED
   {
