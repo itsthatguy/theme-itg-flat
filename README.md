@@ -1,6 +1,6 @@
 # Theme - itg.flat
 
-*Note: This theme is currently only working with Sublime Text 3. I'll be resolving this soon.* 
+*Update: Sublime text 2 and 3 now supported.*
 
 ## Here it is
 
