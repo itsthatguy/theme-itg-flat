@@ -4,7 +4,7 @@
 
 ## Here it is
 
-My flat, retina friendly, sublime-theme.  It comes in two flavors, Dark and Light. I'll be adding more color variations over the coming weeks, so stay tuned.
+My flat, retina friendly, sublime-theme.  It comes in two flavors, Dark and Light. I'll be adding more color variations over the coming weeks, so stay tuned. [Read more about it](http://itsthatguy.com/post/70191573560/sublime-text-theme-itg-flat)
 
 Installation is a snap. Once you have [Package Control](https://sublime.wbond.net/installation) installed, you just need to follow the instructions below.
 
