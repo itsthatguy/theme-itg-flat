@@ -210,23 +210,6 @@
     "settings": ["itg_small_tabs"],
     "tab_height": 32
   },
-  // SQUARE TABS
-  {
-    "class": "tabset_control",
-    "settings": ["itg_square_tabs"],
-    "layer0.texture": "",
-    "content_margin": [0, 0, 0, 0]
-  },
-  {
-    "class": "tab_control",
-    "settings": ["itg_square_tabs"],
-    // Inactive tab settings
-    "layer0.texture": "Theme - itg.flat/assets/tab-inactive.png",
-    // Active tab setting
-    "layer1.texture": "Theme - itg.flat/assets/tab-active.png",
-    // Hover tab setting
-    "layer2.texture": "Theme - itg.flat/assets/tab-hover.png"
-  },
 
 //
 // FOLD BUTTONS
