@@ -423,7 +423,7 @@
   {
     "class": "label_control",
     "parents": [{"class": "status_bar"}],
-    // "color": [255, 255, 255, 200],
+    "color": [255, 255, 255, 200],
     "shadow_color": [200, 200, 200],
     "shadow_offset": [0, 0],
     "font.bold" : false
@@ -523,7 +523,7 @@
   // SIDEBARSETTINGS
   {
     "class": "sidebar_heading",
-    // "color": [255, 255, 255, 200],
+    "color": [255, 255, 255, 200],
     "font.bold": true,
     "shadow_color": [148, 149, 151],
     "shadow_offset": [0, 0]
@@ -541,7 +541,7 @@
   // Sidebar entry
   {
     "class": "sidebar_label",
-    // "color": [255, 255, 255, 200],
+    "color": [255, 255, 255, 200],
     "shadow_offset": [0, 0]
   },
   // Sidebar folder entry
