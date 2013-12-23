@@ -20,7 +20,7 @@ To enable the theme and adjust theme settings edit your `Preferences.sublime-set
 
 ##### Enabling the custom Syntax Highlighting
 
-Select `itg.Monokai` from `Preferences > Color Scheme > Theme - itg.flat`:
+Select `itg.dark` or `itg.light` from `Preferences > Color Scheme > Theme - itg.flat`:
 
 or add this to your `Preferences.sublime-settings` file:
 

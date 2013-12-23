@@ -49,9 +49,9 @@ To enable the theme and adjust theme settings edit your `Preferences.sublime-set
 
 ##### Enabling the custom Syntax Highlighting
 
-Select `itg.Monokai` from `Preferences > Color Scheme > Theme - itg.flat`:
+Select `itg.dark` or `itg.light` from `Preferences > Color Scheme > Theme - itg.flat`:
 
-![](https://www.evernote.com/shard/s117/sh/ea017a99-b411-4c5d-b5b2-020d502ad698/ff72c9174cf657adc14f682c3792c379/deep/0/Pasted-Image-12-15-13,-12-11-PM.jpg)
+![](https://www.evernote.com/shard/s117/sh/a35a2183-e5a7-4bf9-904e-fa450288a984/7a1fe2a2c331e6d9c5d8c9d74eceeb3f/deep/0/Pasted-Image-12-23-13,-12-07-PM.jpg)
 
 or add this to your `Preferences.sublime-settings` file:
 
