@@ -56,7 +56,11 @@ Select `itg.dark` or `itg.light` from `Preferences > Color Scheme > Theme - itg.
 or add this to your `Preferences.sublime-settings` file:
 
 ```javascript
-"color_scheme": "Packages/Theme - itg.flat/itg.Monokai.tmTheme",
+// for a dark theme use:
+"color_scheme": "Packages/Theme - itg.flat/itg.dark.tmTheme",
+
+// for a light theme use:
+"color_scheme": "Packages/Theme - itg.flat/itg.light.tmTheme",
 ```
 
 
