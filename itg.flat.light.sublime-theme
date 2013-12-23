@@ -370,7 +370,7 @@
 
   {
     "class": "sheet_container_control",
-    "layer0.tint": [38,41,44],
+    "layer0.tint": [178, 169, 165, 250],
     "layer0.opacity": 1.0
   },
 
@@ -380,7 +380,7 @@
   {
     "class": "grid_layout_control",
     "border_size": 1,
-    "border_color": [70, 70, 70]
+    "border_color": [178, 169, 165, 250]
   },
 
 //
@@ -399,10 +399,10 @@
   // General labels
   {
     "class": "label_control",
-    "color": [201, 202, 203],
+    "color": [91, 84, 81, 255],
     "shadow_color": [201, 202, 203],
     "shadow_offset": [0, 0],
-    "font.bold" : true,
+    "font.bold" : false,
     "font.size" : 11
   },
   // Text field labels
@@ -786,11 +786,11 @@
   // Text input field item
   {
     "class": "text_line_control",
-    "layer0.texture": "",
-    "layer0.tint": [212, 205, 202, 255],
-    "layer0.opacity": 0.0,
+    "layer0.texture": "Theme - itg.flat/assets/input.png",
+    "layer0.tint": [230, 230, 230],
+    "layer0.opacity": 1.0,
     "layer0.inner_margin": [10,10,10,10],
-    "content_margin": [0, 0, 0, 0]
+    "content_margin": [4, 5, 15, 4]
   },
 
 //
