@@ -101,7 +101,7 @@
 			<key>name</key>
 			<string>User-defined constant</string>
 			<key>scope</key>
-			<string>constant.character, constant.other</string>
+			<string>constant.character, constant.other, variable.other.constant</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -352,6 +352,39 @@
 			<dict>
 				<key>foreground</key>
 				<string>#73817D</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Ruby: Variable</string>
+			<key>scope</key>
+			<string>variable.other.readwrite.instance.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#F6AA11</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Ruby: Class</string>
+			<key>scope</key>
+			<string>entity.name.type.class.ruby, support.class.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#a7e450</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Rails: ActiveRecord function</string>
+			<key>scope</key>
+			<string>support.function.activerecord.rails, support.function.activesupport.rails</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#f35656</string>
 			</dict>
 		</dict>
 		<dict>
