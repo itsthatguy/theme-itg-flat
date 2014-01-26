@@ -78,3 +78,9 @@ or add this to your `Preferences.sublime-settings` file:
 "itg_sidebar_tree_xlarge": true
 ```
 
+
+
+# Contributing:
+
+* Fork this repository.
+* Create a new pull request, with your changes, to the `development` branch.
