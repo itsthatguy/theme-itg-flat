@@ -16,8 +16,7 @@
     "tab_width": 160,
     "tab_min_width": 48,
     "tab_height": 48,
-    "mouse_wheel_switch": false,
-    "row_padding": [8, 4]
+    "mouse_wheel_switch": false
   },
   {
     "class": "tabset_control",
