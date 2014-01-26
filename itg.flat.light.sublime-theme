@@ -381,7 +381,7 @@
   {
     "class": "grid_layout_control",
     "border_size": 1,
-    "border_color": [178, 169, 165, 250]
+    "border_color": [178, 169, 165, 250],
   },
 
 //

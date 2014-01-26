@@ -16,7 +16,8 @@
     "tab_width": 160,
     "tab_min_width": 48,
     "tab_height": 48,
-    "mouse_wheel_switch": false
+    "mouse_wheel_switch": false,
+    "row_padding": [8, 4]
   },
   {
     "class": "tabset_control",
@@ -250,7 +251,8 @@
   {
     "class": "scroll_bar_control",
     "layer0.texture": "",
-    "layer0.opacity": 0.0,
+    "layer0.opacity": 1.0,
+    "layer0.tint": [65, 69, 78],
     "layer0.inner_margin": [0, 0],
     "blur": false
   },
@@ -260,7 +262,7 @@
     "attributes": ["horizontal"],
     "layer0.texture": "",
     "layer0.tint": [65, 69, 78],
-    "layer0.opacity": 0.0,
+    "layer0.opacity": 1.0,
     "layer0.inner_margin": [6, 0],
     "blur": false
   },
@@ -269,7 +271,7 @@
     "class": "scroll_corner_control",
     "layer0.texture": "",
     "layer0.tint": [65, 69, 78],
-    "layer0.opacity": 0.0,
+    "layer0.opacity": 1.0,
     "layer0.inner_margin": [0, 0]
   },
   // Standard vertical scroll puck
@@ -380,7 +382,7 @@
   {
     "class": "grid_layout_control",
     "border_size": 1,
-    "border_color": [65, 69, 78]
+    "border_color": [65, 69, 78],
   },
 
 //
@@ -852,14 +854,14 @@
     "class": "quick_panel_label",
     "fg": [180, 180, 180],
     "match_fg": [255, 255, 255, 200],
-    "selected_fg": [197, 240, 235],
+    "selected_fg": [215, 247, 207],
     "selected_match_fg": [255, 255, 255, 200]
   },
   {
     "class": "quick_panel_path_label",
     "fg": [180, 180, 180],
     "match_fg": [255, 255, 255, 200],
-    "selected_fg": [197, 240, 235],
+    "selected_fg": [215, 247, 207],
     "selected_match_fg": [255, 255, 255, 200]
   },
   {
@@ -908,7 +910,7 @@
     // text
     "fg": [180, 180, 180],
     "match_fg": [255, 255, 255, 200],
-    "selected_fg": [197, 240, 235],
+    "selected_fg": [215, 247, 207],
     "selected_match_fg": [255, 255, 255, 200]
   },
   {
