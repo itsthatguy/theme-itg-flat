@@ -69,6 +69,7 @@ or add this to your `Preferences.sublime-settings` file:
 ```javascript
 // small tabs
 "itg_small_tabs": true
+"itg_xsmall_tabs": true
 
 // Sidebar padding options
 "itg_sidebar_tree_xsmall": true
