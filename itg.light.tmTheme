@@ -310,6 +310,17 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>String quoted</string>
+			<key>scope</key>
+			<string>string.quoted.single, string.quoted.double</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#a35841</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>String.regexp</string>
 			<key>scope</key>
 			<string>string.regexp</string>
@@ -435,9 +446,9 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>CSS: id</string>
+			<string>CSS/SCSS: id</string>
 			<key>scope</key>
-			<string>meta.selector.css entity.other.attribute-name.id</string>
+			<string>meta.selector.css entity.other.attribute-name.id, source.less entity.other.attribute-name.id, source.scss entity.other.attribute-name.id</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -446,9 +457,9 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>CSS: class</string>
+			<string>CSS/SCSS: class</string>
 			<key>scope</key>
-			<string>meta.selector.css entity.other.attribute-name.class</string>
+			<string>meta.selector.css entity.other.attribute-name.class, source.less entity.other.attribute-name.class, source.scss entity.other.attribute-name.class</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -459,7 +470,7 @@
 			<key>name</key>
 			<string>CSS: property-name</string>
 			<key>scope</key>
-			<string>support.type.property-name.css</string>
+			<string>meta.property-name, support.type.property-name.css</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -468,13 +479,35 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>CSS: property-value</string>
+			<string>CSS/SCSS: font-name</string>
 			<key>scope</key>
-			<string>meta.property-group support.constant.property-value.css, meta.property-value support.constant.property-value.css</string>
+			<string>meta.property-value.css support.constant.font-name.css, meta.property-value.scss support.constant.font-name.scss</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
 				<string>#a35841</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>CSS/SCSS: property-value</string>
+			<key>scope</key>
+			<string>meta.property-group support.constant.property-value.css, meta.property-value support.constant.property-value.css, meta.property-list.css meta.property-value.css, meta.property-value support.constant.property-value.scss, meta.property-list.scss meta.property-value.scss</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#a35841</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>CSS/SCSS: numeric</string>
+			<key>scope</key>
+			<string>meta.property-value.css constant.numeric.css, meta.property-value.scss constant.numeric.scss</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ca5151</string>
 			</dict>
 		</dict>
 		<dict>
@@ -485,7 +518,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#EDF080</string>
+				<string>#a35841</string>
 			</dict>
 		</dict>
 		<dict>
