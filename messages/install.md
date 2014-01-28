@@ -11,8 +11,13 @@ The theme is listed as `Theme - itg.flat` in the packages list.
 
 To enable the theme and adjust theme settings edit your `Preferences.sublime-settings` file:
 
-    // for a dark theme use:
+    // for a dark theme use one of the following:
     "theme": "itg.flat.dark.sublime-theme"
+    "theme": "itg.flat.dark.aqua.sublime-theme"
+    "theme": "itg.flat.dark.blue.sublime-theme"
+    "theme": "itg.flat.dark.green.sublime-theme"
+    "theme": "itg.flat.dark.orange.sublime-theme"
+    "theme": "itg.flat.dark.yellow.sublime-theme"
 
     // for a light theme use:
     "theme": "itg.flat.light.sublime-theme"
