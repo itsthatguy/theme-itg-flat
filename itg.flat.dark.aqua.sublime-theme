@@ -861,14 +861,14 @@
     "class": "quick_panel_label",
     "fg": [180, 180, 180],
     "match_fg": [255, 255, 255, 200],
-    "selected_fg": [197, 240, 235],
+    "selected_fg": [215, 247, 207],
     "selected_match_fg": [255, 255, 255, 200]
   },
   {
     "class": "quick_panel_path_label",
     "fg": [180, 180, 180],
     "match_fg": [255, 255, 255, 200],
-    "selected_fg": [197, 240, 235],
+    "selected_fg": [215, 247, 207],
     "selected_match_fg": [255, 255, 255, 200]
   },
   {
@@ -917,7 +917,7 @@
     // text
     "fg": [180, 180, 180],
     "match_fg": [255, 255, 255, 200],
-    "selected_fg": [197, 240, 235],
+    "selected_fg": [215, 247, 207],
     "selected_match_fg": [255, 255, 255, 200]
   },
   {
