@@ -39,8 +39,13 @@ To enable the theme and adjust theme settings edit your `Preferences.sublime-set
 ![](https://www.evernote.com/shard/s117/sh/779f46cf-9659-4821-a183-68e82cda7fc8/0919749d14c83296a1cc82051588c09f/deep/0/Pasted-Image-12-15-13,-12-04-PM.jpg)
 
 ```javascript
-// for a dark theme use:
+// for a dark theme use one of the following:
 "theme": "itg.flat.dark.sublime-theme"
+"theme": "itg.flat.dark.aqua.sublime-theme"
+"theme": "itg.flat.dark.blue.sublime-theme"
+"theme": "itg.flat.dark.green.sublime-theme"
+"theme": "itg.flat.dark.orange.sublime-theme"
+"theme": "itg.flat.dark.yellow.sublime-theme"
 
 // for a light theme use:
 "theme": "itg.flat.light.sublime-theme"
@@ -69,6 +74,7 @@ or add this to your `Preferences.sublime-settings` file:
 ```javascript
 // small tabs
 "itg_small_tabs": true
+"itg_xsmall_tabs": true
 
 // Sidebar padding options
 "itg_sidebar_tree_xsmall": true
@@ -77,7 +83,6 @@ or add this to your `Preferences.sublime-settings` file:
 "itg_sidebar_tree_large": true
 "itg_sidebar_tree_xlarge": true
 ```
-
 
 
 # Contributing:

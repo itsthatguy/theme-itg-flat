@@ -211,6 +211,15 @@
     "tab_height": 32
   },
 
+  // XSMALL TABS
+  {
+    "class": "tabset_control",
+    "settings": ["itg_xsmall_tabs"],
+    "tab_height": 24,
+    "tab_width": 80,
+    "tab_min_width": 36
+  },
+
 //
 // FOLD BUTTONS
 //
@@ -371,7 +380,7 @@
 
   {
     "class": "sheet_container_control",
-    "layer0.tint": [178, 169, 165, 250],
+    "layer0.tint": [168, 159, 155, 255],
     "layer0.opacity": 1.0
   },
 

@@ -11,8 +11,13 @@ The theme is listed as `Theme - itg.flat` in the packages list.
 
 To enable the theme and adjust theme settings edit your `Preferences.sublime-settings` file:
 
-    // for a dark theme use:
+    // for a dark theme use one of the following:
     "theme": "itg.flat.dark.sublime-theme"
+    "theme": "itg.flat.dark.aqua.sublime-theme"
+    "theme": "itg.flat.dark.blue.sublime-theme"
+    "theme": "itg.flat.dark.green.sublime-theme"
+    "theme": "itg.flat.dark.orange.sublime-theme"
+    "theme": "itg.flat.dark.yellow.sublime-theme"
 
     // for a light theme use:
     "theme": "itg.flat.light.sublime-theme"
@@ -35,6 +40,7 @@ or add this to your `Preferences.sublime-settings` file:
 
     // small tabs
     "itg_small_tabs": true
+    "itg_xsmall_tabs": true
 
     // Sidebar padding options
     "itg_sidebar_tree_xsmall": true
