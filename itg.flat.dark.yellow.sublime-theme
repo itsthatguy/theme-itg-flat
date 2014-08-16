@@ -322,7 +322,7 @@
     "settings": ["itg_scrollbar_small"],
     "attributes": ["horizontal"],
     "layer0.inner_margin": [4, 2],
-    "content_margin": [12, 2],
+    "content_margin": [12, 2]
   },
 
 //
