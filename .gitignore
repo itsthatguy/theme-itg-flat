@@ -1,5 +1,6 @@
 # OS folder settings
 [Tt]humbs.db
+.ruby-version
 *.DS_Store
 
 # Sublime Text cache files
