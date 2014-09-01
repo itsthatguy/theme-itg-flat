@@ -1208,5 +1208,17 @@
     "class": "icon_highlight",
     "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
     "layer0.tint": [255, 255, 255, 200]
+  },
+  {
+    "class": "icon_file_type",
+    "content_margin": [0,0]
+  },
+  {
+    "class": "icon_folder",
+    "content_margin": [0,0]
+  },
+  {
+    "class": "icon_folder_loading",
+    "content_margin": [0,0]
   }
 ]
