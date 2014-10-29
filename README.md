@@ -41,17 +41,24 @@ To enable the theme and adjust theme settings edit your `Preferences.sublime-set
 ```javascript
 // for a dark theme use:
 "theme": "itg.flat.dark.sublime-theme"
-
+ 
 // for a light theme use:
 "theme": "itg.flat.light.sublime-theme"
+
+// additional (dark) color options
+"theme": "itg.flat.dark.aqua.sublime-theme"
+"theme": "itg.flat.dark.blue.sublime-theme"
+"theme": "itg.flat.dark.green.sublime-theme"
+"theme": "itg.flat.dark.orange.sublime-theme"
+"theme": "itg.flat.dark.yellow.sublime-theme"
 ```
 
 
 ##### Enabling the custom Syntax Highlighting
 
-Select `itg.dark` or `itg.light` from `Preferences > Color Scheme > Theme - itg.flat`:
+Select a theme from `Preferences > Color Scheme > Theme - itg.flat`:
 
-![](https://www.evernote.com/shard/s117/sh/a35a2183-e5a7-4bf9-904e-fa450288a984/7a1fe2a2c331e6d9c5d8c9d74eceeb3f/deep/0/Pasted-Image-12-23-13,-12-07-PM.jpg)
+![](http://i.imgur.com/dBGzR0u.png)
 
 or add this to your `Preferences.sublime-settings` file:
 
@@ -69,12 +76,20 @@ or add this to your `Preferences.sublime-settings` file:
 ```javascript
 // small tabs
 "itg_small_tabs": true
-
+ 
 // Sidebar padding options
 "itg_sidebar_tree_xsmall": true
 "itg_sidebar_tree_small": true
 "itg_sidebar_tree_medium": true
 "itg_sidebar_tree_large": true
 "itg_sidebar_tree_xlarge": true
+
+
+// Scrollbar size options
+"itg_scrollbar_small": true
+"itg_scrollbar_medium": true
+
+// if the scrollbar options aren't working, try setting the following
+"overlay_scroll_bars": "disabled"
 ```
 
