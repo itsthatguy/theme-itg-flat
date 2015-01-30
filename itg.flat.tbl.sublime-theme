@@ -965,8 +965,24 @@
     "layer0.texture": "Theme - itg/assets/icon-highlight-on.png",
   },
   {
-    "class": "icon_file_type",
-    "content_margin": [0,0]
+      "class": "icon_file_type",
+      // layer0.texture is filled in by code with the relevant icon name
+      "layer0.opacity": 1.0,
+      "content_margin": [8, 8]
+  },
+  //          STATE HIDDEN 1
+  {
+      "class": "icon_file_type",
+      "settings" : ["itg_hide_folders"],
+      "content_margin" : 0,
+      "layer0.opacity" : 0.0
+  },
+  //          STATE HIDDEN 2
+  {
+      "class": "icon_file_type",
+      "settings" : ["itg_hide_file_icons"],
+      "content_margin" : 0,
+      "layer0.opacity" : 0.0
   },
   {
     "class": "icon_folder",
