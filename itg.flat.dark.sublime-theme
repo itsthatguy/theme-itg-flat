@@ -175,8 +175,8 @@
     "layer0.inner_margin": 0,
     "layer1.texture": "",
     "layer1.opacity": 0.0,
-    "layer1.inner_margin": 10,
-    "content_margin": [10, 0, 0, 0]
+    "layer1.inner_margin": 0,
+    "content_margin": [9, 7, 8, 6]
   },
   {
     "class": "fold_button_control",
@@ -411,7 +411,7 @@
     "class": "sidebar_tree",
     "row_padding": [8, 4],
     "indent": 14,
-    "indent_offset": 10,
+    "indent_offset": 15,
     "indent_top_level": false,
     "layer0.texture": "",
     "layer0.tint": [65, 69, 78],
@@ -421,7 +421,7 @@
   {
     "class": "sidebar_tree",
     "settings": ["itg_sidebar_tree_xsmall"],
-    "row_padding": [8, 8]
+    "row_padding": [8, 0]
   },
   {
     "class": "sidebar_tree",
@@ -993,7 +993,6 @@
     "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
     "layer0.tint": [255, 255, 255, 200]
   },
-
   {
       "class": "icon_file_type",
       // layer0.texture is filled in by code with the relevant icon name
@@ -1002,10 +1001,9 @@
   },
   //          STATE HIDDEN 1
   {
-      "class": "icon_file_type",
+      "class": "icon_folder",
       "settings" : ["itg_hide_folders"],
-      "content_margin" : 0,
-      "layer0.opacity" : 0.0
+      "content_margin" : 0
   },
   //          STATE HIDDEN 2
   {
