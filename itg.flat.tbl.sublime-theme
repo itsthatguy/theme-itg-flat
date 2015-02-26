@@ -153,6 +153,13 @@
     // "layer1.opacity": 0.0
   },
 
+  // Tab transient
+  {
+    "class": "tab_label",
+    "attributes": ["transient"],
+    "font.italic": true
+  },
+
   // SMALL TABS
   {
     "class": "tabset_control",
@@ -533,6 +540,13 @@
         "color": [65, 69, 78, 255],
         "shadow_color": [0, 0, 0],
         "shadow_offset": [0, 0]
+      },
+
+      // Sidebar label transient
+      {
+        "class": "sidebar_label",
+        "attributes": ["transient"],
+        "font.italic": true
       },
 
     // Sidebar file close
