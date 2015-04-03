@@ -1,3 +1,5 @@
+[![Gitter Chat](http://gitter.im/itsthatguy/theme-itg-flat.png)](https://gitter.im/itsthatguy/theme-itg-flat)
+
 # Theme - itg.flat
 
 *Update: Sublime text 2 and 3 now supported.*
