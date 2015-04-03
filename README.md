@@ -1,4 +1,4 @@
-[![Gitter Chat](http://gitter.im/itsthatguy/theme-itg-flat.png)](https://gitter.im/itsthatguy/theme-itg-flat)
+[![Gitter Chat](https://badges.gitter.im/itsthatguy/theme-itg-flat.png)](https://gitter.im/itsthatguy/theme-itg-flat)
 
 # Theme - itg.flat
 
