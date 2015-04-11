@@ -204,6 +204,13 @@
     "content_margin": [8, 8]
   },
 
+  // Tab transient
+  {
+    "class": "tab_label",
+    "attributes": ["transient"],
+    "font.italic": true
+  },
+
   // SMALL TABS
   {
     "class": "tabset_control",
@@ -624,7 +631,12 @@
     "shadow_offset": [0, 0]
   },
 
-
+  // Sidebar label transient
+  {
+    "class": "sidebar_label",
+    "attributes": ["transient"],
+    "font.italic": true
+  },
 
   // ########################################################
   // Sidebar file close
