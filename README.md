@@ -95,3 +95,6 @@ or add this to your `Preferences.sublime-settings` file:
 "overlay_scroll_bars": "disabled"
 ```
 
+## Contributing
+
+Please read the [contributors' guide](CONTRIBUTING.md)
