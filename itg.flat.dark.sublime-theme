@@ -514,7 +514,7 @@
     "class": "sidebar_tree",
     "row_padding": [8, 4],
     "indent": 14,
-    "indent_offset": 20,
+    "indent_offset": 15,
     "indent_top_level": false,
     "layer0.texture": "",
     "layer0.tint": [65, 69, 78],
@@ -724,7 +724,7 @@
   {
     "class": "disclosure_button_control",
     "parents": [{"class": "tree_row"}],
-    "content_margin": [0, 6, 18, 7],
+    "content_margin": [0, 6, 0, 7],
     "layer0.opacity": 1.0,
     "layer0.inner_margin": 0,
     "layer0.texture": "Theme - itg.flat/assets/group-closed.png",
@@ -1210,12 +1210,34 @@
     "layer0.tint": [255, 255, 255, 200]
   },
   {
-    "class": "icon_file_type",
-    "content_margin": [0,0]
+      "class": "icon_file_type",
+      // layer0.texture is filled in by code with the relevant icon name
+      "layer0.opacity": 1.0,
+      "content_margin": [8, 8]
+  },
+  //          STATE HIDDEN 1
+  {
+      "class": "icon_folder",
+      "settings" : ["itg_hide_folders"],
+      "content_margin" : 0
+  },
+  //          STATE HIDDEN 2
+  {
+      "class": "icon_file_type",
+      "settings" : ["itg_hide_file_icons"],
+      "content_margin" : 0,
+      "layer0.opacity" : 0.0
   },
   {
     "class": "icon_folder",
-    "content_margin": [0,0]
+    "layer0.texture": "Theme - itg.flat/assets/group-closed.png",
+    "content_margin": [8,5]
+  },
+  {
+    "class": "icon_folder",
+    "parents": [{"attributes": ["expanded"]}],
+    "layer0.texture": "Theme - itg.flat/assets/group-open.png",
+    "content_margin": [8,5]
   },
   {
     "class": "icon_folder_loading",
