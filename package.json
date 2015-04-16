@@ -1,0 +1,36 @@
+{
+  "name": "theme-itg-flat",
+  "version": "0.2.0",
+  "description": "sublime text itg.flat theme (and dev environment in one)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itsthatguy/theme-itg-flat.git"
+  },
+  "keywords": [
+    "sublime",
+    "text",
+    "sublime",
+    "theme",
+    "flat",
+    "itg",
+    "style",
+    "design"
+  ],
+  "author": "Kevin Altman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itsthatguy/theme-itg-flat/issues"
+  },
+  "homepage": "https://github.com/itsthatguy/theme-itg-flat",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-mustache": "^1.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-tap": "^0.1.3",
+    "underscore": "^1.8.3"
+  }
+}

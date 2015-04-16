@@ -5,3 +5,5 @@
 # Sublime Text cache files
 *.cache
 *.psd
+
+node_modules/
