@@ -1213,7 +1213,7 @@
       "class": "icon_file_type",
       // layer0.texture is filled in by code with the relevant icon name
       "layer0.opacity": 1.0,
-      "content_margin": [8, 8]
+      "content_margin": 0
   },
   //          STATE HIDDEN 1
   {
@@ -1224,9 +1224,9 @@
   //          STATE HIDDEN 2
   {
       "class": "icon_file_type",
-      "settings" : ["itg_hide_file_icons"],
-      "content_margin" : 0,
-      "layer0.opacity" : 0.0
+      "settings" : ["itg_show_file_icons"],
+      "content_margin" : [8, 8],
+      "layer0.opacity" : 1.0
   },
   {
     "class": "icon_folder",
