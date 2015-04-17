@@ -1,6 +1,6 @@
 {
   "name": "theme-itg-flat",
-  "version": "0.2.1",
+  "version": "1.4.0",
   "description": "sublime text itg.flat theme (and dev environment in one)",
   "main": "index.js",
   "scripts": {
