@@ -1,7 +1,6 @@
 _ = require('underscore');
 
 var defaults = function(defaultColors) {
-  console.log(defaultColors);
   return {
     // General
     iconPath: "Theme - itg.flat/assets/",
