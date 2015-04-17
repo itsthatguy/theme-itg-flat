@@ -1,7 +1,5 @@
-//
-// TABS
-//
-// Tab set
+{{! TABS }}
+{{! Tab set }}
 [
   {
     "class": "tabset_control",
@@ -24,10 +22,9 @@
     "mouse_wheel_switch": true
   },
 
-  /*****************************************************************************
-   * TAB BACKGROUNDS
-   ****************************************************************************/
-  // Tab element
+  {{!*****************************************************************************
+      TAB BACKGROUNDS }}
+  {{! Tab element }}
   {
     "class": "tab_control",
     "content_margin": [28, 6, 28, 4],
@@ -39,25 +36,21 @@
     "layer2.opacity": 0.0
   },
   {
-    // Tab close state
+    {{!  Tab close state }}
     "class": "tab_control",
     "settings": ["show_tab_close_buttons"],
-    "content_margin": [20, 0, 10, 1] // adjust text position
+    "content_margin": [20, 0, 10, 1] {{!  adjust text position }}
   },
 
 
-  /*****************************************************************************
-   *
-   * TAB LABELS
-   *
-   ****************************************************************************/
-
+  {{!*****************************************************************************
+      TAB LABELS }}
   {
     "class": "tab_label",
     "shadow_offset": [0,0]
   },
 
-  // Inactive Tab
+  {{!  Inactive Tab }}
   {
     "class": "tab_control",
     "layer0.tint": {{{tabSettings.inactive.backgroundColor}}}
@@ -70,7 +63,7 @@
     "font.size" : 12
   },
 
-  // Active Tab
+  {{!  Active Tab }}
   {
     "class": "tab_control",
     "attributes": ["selected"],
@@ -83,7 +76,7 @@
     "font.bold" : {{{tabSettings.active.textBold}}}
   },
 
-  // Hover Tab
+  {{!  Hover Tab }}
   {
     "class": "tab_control",
     "attributes": ["hover"],
@@ -96,18 +89,16 @@
     "font.bold" : {{{tabSettings.hover.textBold}}}
   },
 
-
-
-  // Tab close button
+  {{!  Tab close button }}
   {
     "class": "tab_close_button",
     "content_margin": [10, 0],
-    // Tab close default settings
+    {{!  Tab close default settings }}
     "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}{{{icons.closeIcon}}}",
     "layer0.tint": {{{closeIconSettings.tabs.inactive.color}}},
     "layer0.opacity": {{{closeIconSettings.tabs.inactive.defaultOpacity}}},
     "layer0.inner_margin": [0, 0],
-    // Tab close hover settings
+    {{!  Tab close hover settings }}
     "layer1.texture": "",
     "layer2.texture": "",
     "layer3.texture": "",
@@ -116,7 +107,7 @@
     "layer3.opacity": 0.0
   },
   {
-    // Tab button size
+    {{!  Tab button size }}
     "class": "tab_close_button",
     "settings": ["show_tab_close_buttons"],
     "content_margin": [8, 8]
@@ -140,14 +131,13 @@
     "layer0.opacity": {{{closeIconSettings.tabs.active.hoverOpacity}}}
   },
   {
-    // Tab close button hover
+    {{!  Tab close button hover }}
     "class": "tab_close_button",
     "attributes": ["hover"],
     "parents": [{"class": "tab_control", "attributes": ["hover"]}],
     "layer0.tint": {{{closeIconSettings.tabs.hover.hoverColor}}}
-    // "layer0.opacity": {{{closeIconSettings.tabs.hover.hoverOpacity}}}
   },
-  // Tab dirty button
+  {{!  Tab dirty button }}
   {
     "class": "tab_close_button",
     "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
@@ -155,8 +145,7 @@
     "layer0.tint": {{{closeIconSettings.tabs.inactive.dirtyColor}}},
     "layer0.opacity": 1.0
   },
-
-  // Tab dirty button selected hover
+  {{!  Tab dirty button selected hover }}
   {
     "class": "tab_close_button",
     "parents": [{"class": "tab_control", "attributes": ["dirty", "selected"]}],
@@ -164,7 +153,7 @@
     "layer0.tint": {{{closeIconSettings.tabs.active.dirtyColor}}},
     "layer0.opacity": 1.0
   },
-  // Tab dirty button hover
+  {{!  Tab dirty button hover }}
   {
     "class": "tab_close_button",
     "parents": [{"class": "tab_control", "attributes": ["dirty", "hover"]}],
@@ -173,7 +162,7 @@
     "layer0.opacity": 1.0
   },
   {
-    // Tab dirty icon hover
+    {{!  Tab dirty icon hover }}
     "class": "tab_close_button",
     "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
     "attributes": ["hover"],
@@ -181,40 +170,29 @@
     "layer0.tint": {{{closeIconSettings.tabs.active.hoverColor}}},
     "layer0.opacity": 1.0
   },
-  // {
-  //   // Tab dirty button active
-  //   "class": "tab_close_button",
-  //   "parents": [{"class": "tab_control", "attributes": ["selected"]}],
-  //   "attributes": ["selected"],
-  //   "layer0.opacity": 0.0,
-  // },
-  // Tab close button hidden with highlight modified flag true
+  {{!  Tab close button hidden with highlight modified flag true }}
   {
-    // Tab dirty state (close button hidden)
+    {{!  Tab dirty state (close button hidden) }}
     "class": "tab_control",
     "settings": ["!show_tab_close_buttons", "highlight_modified_tabs"],
     "attributes": ["dirty"],
     "content_margin": [22, 6, 15, 4]
   },
   {
-    // Tab dirty button (close button hidden)
+    {{!  Tab dirty button (close button hidden) }}
     "class": "tab_close_button",
     "settings": ["!show_tab_close_buttons", "highlight_modified_tabs"],
     "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
     "content_margin": [8, 8]
   },
-
-  // SMALL TABS
+  {{!  SMALL TABS }}
   {
     "class": "tabset_control",
     "settings": ["itg_small_tabs"],
     "tab_height": 32
   },
 
-//
-// FOLD BUTTONS
-//
-
+{{!  FOLD BUTTONS }}
   {
     "class": "fold_button_control",
     "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}fold-closed.png",
@@ -242,11 +220,8 @@
     "layer1.texture": ""
   },
 
-//
-// STANDARD SCROLLBARS
-//
-
-  // Standard vertical scroll bar
+{{!  STANDARD SCROLLBARS }}
+  {{!  Standard vertical scroll bar }}
   {
     "class": "scroll_bar_control",
     "layer0.texture": "",
@@ -255,7 +230,7 @@
     "layer0.inner_margin": [0, 0],
     "blur": false
   },
-  // Standard horizontal scroll bar
+  {{!  Standard horizontal scroll bar }}
   {
     "class": "scroll_bar_control",
     "attributes": ["horizontal"],
@@ -265,7 +240,7 @@
     "layer0.inner_margin": [6, 0],
     "blur": false
   },
-  // Standard scroll bar corner
+  {{!  Standard scroll bar corner }}
   {
     "class": "scroll_corner_control",
     "layer0.texture": "",
@@ -273,7 +248,7 @@
     "layer0.opacity": 1.0,
     "layer0.inner_margin": [0, 0]
   },
-  // Standard vertical scroll puck
+  {{!  Standard vertical scroll puck }}
   {
     "class": "puck_control",
     "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}standard-puck-vertical.png",
@@ -283,7 +258,7 @@
     "content_margin": [2, 12],
     "blur": false
   },
-  // Standard horizontal scroll puck
+  {{!  Standard horizontal scroll puck }}
   {
     "class": "puck_control",
     "attributes": ["horizontal"],
@@ -295,7 +270,7 @@
     "blur": false
   },
 
-  // SCROLLBAR SETTINGS
+  {{!  SCROLLBAR SETTINGS }}
   {
     "class": "puck_control",
     "settings": ["itg_scrollbar_medium"],
@@ -325,11 +300,8 @@
     "content_margin": [12, 2]
   },
 
-//
-// OVERLAY SCROLLBARS
-//
-
-  // Overlay toggle scroll bar
+{{!  OVERLAY SCROLLBARS }}
+  {{!  Overlay toggle scroll bar }}
   {
     "class": "scroll_area_control",
     "settings": ["overlay_scroll_bars"],
@@ -340,7 +312,7 @@
     "settings": ["!overlay_scroll_bars"],
     "overlay": false
   },
-  // Overlay vertical scroll bar
+  {{!  Overlay vertical scroll bar }}
   {
     "class": "scroll_bar_control",
     "settings": ["overlay_scroll_bars"],
@@ -348,7 +320,7 @@
     "layer0.inner_margin": [0, 5],
     "blur": true
   },
-  // Overlay horizontal scroll bar
+  {{!  Overlay horizontal scroll bar }}
   {
     "class": "scroll_bar_control",
     "settings": ["overlay_scroll_bars"],
@@ -357,7 +329,7 @@
     "layer0.inner_margin": [5, 0],
     "blur": true
   },
-  // Overlay vertical puck
+  {{!  Overlay vertical puck }}
   {
     "class": "puck_control",
     "settings": ["overlay_scroll_bars"],
@@ -368,7 +340,7 @@
     "content_margin": [2, 20],
     "blur": true
   },
-  // Overlay horizontal puck
+  {{!  Overlay horizontal puck }}
   {
     "class": "puck_control",
     "settings": ["overlay_scroll_bars"],
@@ -380,14 +352,14 @@
     "content_margin": [20, 2],
     "blur": true
   },
-  // Overlay light puck (for dark content)
+  {{!  Overlay light puck (for dark content) }}
   {
     "class": "puck_control",
     "settings": ["overlay_scroll_bars"],
     "attributes": ["dark"],
     "layer0.tint": {{{scrollbars.darkContentColor}}}
   },
-  // Overlay light horizontal puck (for dark content)
+  {{!  Overlay light horizontal puck (for dark content) }}
   {
     "class": "puck_control",
     "settings": ["overlay_scroll_bars"],
@@ -395,39 +367,27 @@
     "layer0.tint": {{{scrollbars.darkContentColor}}}
   },
 
-//
-// EMPTY WINDOW BACKGROUND
-//
-
+{{!  EMPTY WINDOW BACKGROUND }}
   {
     "class": "sheet_container_control",
     "layer0.tint": {{{primaryDark}}},
     "layer0.opacity": 1.0
   },
 
-//
-// GRID LAYOUT
-//
+{{!  GRID LAYOUT }}
   {
     "class": "grid_layout_control",
     "border_size": 1,
     "border_color": {{{primaryDark}}}
   },
-
-//
-// MINI MAP
-//
-
+{{!  MINI MAP }}
   {
     "class": "minimap_control",
     "viewport_color": {{{minimapBackground}}}
   },
 
-//
-// LABELS
-//
-
-  // General labels
+{{!  LABELS }}
+  {{!  General labels }}
   {
     "class": "label_control",
     "color": {{{sidebarSettings.deselected.textColor}}},
@@ -436,21 +396,21 @@
     "font.bold" : false,
     "font.size" : 11
   },
-  // Text field labels
+  {{!  Text field labels }}
   {
     "class": "label_control",
     "parents": [{"class": "panel_control"}],
     "shadow_color": [201, 202, 203],
     "shadow_offset": [0, 0]
   },
-  // Button labels
+  {{!  Button labels }}
   {
     "class": "label_control",
     "parents": [{"class": "button_control"}],
     "shadow_color": [201, 202, 203],
     "shadow_offset": [0, 0]
   },
-  // Status bar label
+  {{!  Status bar label }}
   {
     "class": "label_control",
     "parents": [{"class": "status_bar"}],
@@ -460,10 +420,8 @@
     "font.bold" : false
   },
 
-  //
-  // TOOLTIP
-  //
-  // Tooltip container
+  {{!  TOOLTIP }}
+  {{!  Tooltip container }}
   {
     "class": "tool_tip_control",
     "layer0.texture": "",
@@ -472,16 +430,14 @@
     "layer0.opacity": 0.95,
     "content_margin": [10, 10]
   },
-  // Tooltip content
+  {{!  Tooltip content }}
   {
     "class": "tool_tip_label_control",
     "color": {{{panelSelectedMatchTextColor}}}
   },
 
-//
-// STATUS BAR
-//
-  // Status bar container
+{{!  STATUS BAR }}
+  {{!  Status bar container }}
   {
     "class": "status_bar",
     "layer0.texture": "",
@@ -495,11 +451,8 @@
     "min_size": [100, 0]
   },
 
-//
-// SIDEBAR
-//
-
-  // Sidebar container
+{{!  SIDEBAR }}
+  {{!  Sidebar container }}
   {
     "class": "sidebar_container",
     "layer0.texture": "",
@@ -509,7 +462,7 @@
     "layer0.inner_margin": [0, 0, 0, 0],
     "content_margin": [0, 0, 0, 0]
   },
-  // Sidebar tree
+  {{!  Sidebar tree }}
   {
     "class": "sidebar_tree",
     "row_padding": [8, 4],
@@ -547,11 +500,8 @@
     "row_padding": [8, 8]
   },
 
-
-
-  // ########################################################
-  // Sidebar heading
-  // SIDEBARSETTINGS
+  {{!  Sidebar heading }}
+  {{!  SIDEBARSETTINGS }}
   {
     "class": "sidebar_heading",
     "color": {{{sidebarSettings.headingTextColor}}},
@@ -559,9 +509,8 @@
     "shadow_color": [148, 149, 151],
     "shadow_offset": [0, 0]
   },
-
-  // :: DESELECTED
-  // Sidebar Row
+  {{!  :: DESELECTED }}
+  {{!  Sidebar Row }}
   {
     "class": "tree_row",
     "layer0.texture": "",
@@ -569,13 +518,13 @@
     "layer0.opacity": 1.0,
     "layer0.inner_margin": [1,1]
   },
-  // Sidebar entry
+  {{!  Sidebar entry }}
   {
     "class": "sidebar_label",
     "color": {{{sidebarSettings.deselected.textColor}}},
     "shadow_offset": [0, 0]
   },
-  // Sidebar folder entry
+  {{!  Sidebar folder entry }}
   {
     "class": "sidebar_label",
     "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
@@ -583,14 +532,14 @@
     "shadow_color": [0, 0, 0],
     "shadow_offset": [0, 0]
   },
-  // Sidebar label (and folder) hover
-  // closed
+  {{!  Sidebar label (and folder) hover }}
+  {{!  closed }}
   {
     "class": "sidebar_label",
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
     "color": {{{sidebarSettings.hover.textColor}}}
   },
-  // open
+  {{!  open }}
   {
     "class": "sidebar_label",
     "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
@@ -598,8 +547,8 @@
     "font.bold": true
   },
 
-  // :: HOVER
-  // Sidebar row selected
+  {{!  :: HOVER }}
+  {{!  Sidebar row selected }}
   {
     "class": "tree_row",
     "layer0.tint": {{{sidebarSettings.hover.backgroundColor}}},
@@ -607,15 +556,15 @@
     "attributes": ["hover"]
   },
 
-  // :: SELECTED
-  // Sidebar row selected
+  {{!  :: SELECTED }}
+  {{!  Sidebar row selected }}
   {
     "class": "tree_row",
     "layer0.tint": {{{sidebarSettings.selected.backgroundColor}}},
     "layer0.opacity": 1.0,
     "attributes": ["selected"]
   },
-  // Sidebar entry selected
+  {{!  Sidebar entry selected }}
   {
     "class": "sidebar_label",
     "parents": [{"class": "tree_row", "attributes": ["selected"]}],
@@ -624,11 +573,8 @@
     "shadow_offset": [0, 0]
   },
 
-
-
-  // ########################################################
-  // Sidebar file close
-  // :: DEFAULT
+  {{!  Sidebar file close }}
+  {{!  :: DEFAULT }}
   {
     "class": "close_button",
     "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}{{{icons.closeIcon}}}",
@@ -641,8 +587,8 @@
     "content_margin": [8, 8]
   },
 
-  // > ROW :: HOVER
-  // >> ICON
+  {{!  > ROW :: HOVER }}
+  {{!  >> ICON }}
   {
     "class": "close_button",
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
@@ -650,8 +596,8 @@
     "layer0.tint": {{{closeIconSettings.sidebar.hover.color}}}
   },
 
-  // > ROW :: HOVER
-  // >> ICON :: HOVER
+  {{!  > ROW :: HOVER }}
+  {{!  >> ICON :: HOVER }}
   {
     "class": "close_button",
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
@@ -660,8 +606,8 @@
     "layer0.opacity": {{{closeIconSettings.sidebar.hover.hoverOpacity}}}
   },
 
-  // > ROW :: SELECTED
-  // >> ICON
+  {{!  > ROW :: SELECTED }}
+  {{!  >> ICON }}
   {
     "class": "close_button",
     "parents": [{"class": "tree_row", "attributes": ["selected"]}],
@@ -669,8 +615,8 @@
     "layer0.opacity": {{{closeIconSettings.sidebar.selected.defaultOpacity}}}
   },
 
-  // > ROW :: SELECTED :: HOVER
-  // >> ICON :: HOVER
+  {{!  > ROW :: SELECTED :: HOVER }}
+  {{!  >> ICON :: HOVER }}
   {
     "class": "close_button",
     "parents": [{"class": "tree_row", "attributes": ["hover", "selected"]}],
@@ -678,7 +624,7 @@
     "layer0.tint": {{{closeIconSettings.sidebar.selected.color}}},
     "layer0.opacity": {{{closeIconSettings.sidebar.selected.hoverOpacity}}}
   },
-  // Sidebar file dirty
+  {{!  Sidebar file dirty }}
   {
     "class": "close_button",
     "attributes": ["dirty"],
@@ -694,7 +640,6 @@
     "layer0.tint": {{{closeIconSettings.sidebar.selected.dirtyColor}}},
     "layer0.opacity": {{{closeIconSettings.sidebar.selected.hoverOpacity}}}
   },
-
   {
     "class": "close_button",
     "attributes": ["dirty"],
@@ -715,24 +660,22 @@
     "layer0.tint": {{{closeIconSettings.sidebar.selected.hoverColor}}}
   },
 
-  //
-  // Sidebar Selected Folder Icons
+  {{!  Sidebar Selected Folder Icons }}
   {
-      "class": "icon_file_type",
-      "content_margin": [0,0]
+    "class": "icon_file_type",
+    "content_margin": [0,0]
   },
   {
-      "class": "icon_folder",
-      "content_margin": [0,0]
+    "class": "icon_folder",
+    "content_margin": [0,0]
   },
   {
-      "class": "icon_folder_loading",
-      "content_margin": [0,0]
+    "class": "icon_folder_loading",
+    "content_margin": [0,0]
   },
 
-  //
-  // DESELECTED
-  // :: CLOSED
+  {{!  DESELECTED }}
+  {{!  :: CLOSED }}
   {
     "class": "disclosure_button_control",
     "parents": [{"class": "tree_row"}],
@@ -743,71 +686,64 @@
     "layer0.tint": {{{sidebarSettings.deselected.textColor}}}
   },
 
-  // :: CLOSED :: HOVER
+  {{!  :: CLOSED :: HOVER }}
   {
     "class": "disclosure_button_control",
     "parents": [{"class": "tree_row", "attributes": ["hover"]}]
   },
 
-  //
-  // :: OPEN
+  {{!  :: OPEN }}
   {
     "class": "disclosure_button_control",
     "attributes": ["expanded"],
     "parents": [{"class": "tree_row"}],
     "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}{{{icons.sidebarGroupOpen}}}"
   },
-  //
-  // :: OPEN :: HOVER
+
+  {{!  :: OPEN :: HOVER }}
   {
     "class": "disclosure_button_control",
     "attributes": ["expanded"],
     "parents": [{"class": "tree_row", "attributes": ["hover"]}]
   },
 
-  //
-  // SELECTED
-  // :: CLOSED
+  {{!  SELECTED }}
+  {{!  :: CLOSED }}
   {
     "class": "disclosure_button_control",
     "parents": [{"class": "tree_row", "attributes": ["selected"]}],
     "layer0.tint": {{{sidebarSettings.selected.textColor}}}
   },
-  // :: OPEN
+  {{!  :: OPEN }}
   {
     "class": "disclosure_button_control",
     "attributes": ["expanded"],
     "parents": [{"class": "tree_row", "attributes": ["selected"]}]
   },
 
-
-
-  //
-  // STANDARD TEXT BUTTONS
-  //
-
-  // Standard buttons (used for Find / Replace panel)
+  {{!  STANDARD TEXT BUTTONS }}
+  {{!  Standard buttons (used for Find / Replace panel) }}
   {
     "class": "button_control",
     "content_margin": [4, 6, 4, 5],
     "min_size": [69, 0],
-    // Default button state
-    // "color": [0,0,0],
+    {{!  Default button state }}
+    {{!  "color": [0,0,0], }}
     "layer0.texture": "",
     "layer0.tint": {{{sidebarBackground}}},
     "layer0.opacity": 1.0,
     "layer0.inner_margin": [6, 6],
-    // Pressed button setup
+    {{!  Pressed button setup }}
     "layer1.opacity": 0.0
   },
   {
-    // Pressed button state
+    {{!  Pressed button state }}
     "class": "button_control",
     "attributes": ["hover"],
     "layer0.tint": {{{sidebarSettings.hover.backgroundColor}}}
   },
   {
-    // Pressed button state
+    {{!  Pressed button state }}
     "class": "button_control",
     "attributes": ["pressed", "hover"],
     "layer0.tint": {{{sidebarSettings.selected.backgroundColor}}}
@@ -822,11 +758,9 @@
     "parents": [{"class": "button_control", "attributes": ["pressed", "hover"]}],
     "color": {{{sidebarSettings.selected.textColor}}}
   },
-//
-// TEXT INPUT FIELD
-//
 
-  // Text input field item
+{{!  TEXT INPUT FIELD }}
+  {{!  Text input field item }}
   {
     "class": "text_line_control",
     "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}input.png",
@@ -836,11 +770,8 @@
     "content_margin": [4, 5, 15, 4]
   },
 
-//
-// PANEL BACKGROUNDS
-//
-
-  // Bottom panel background
+{{!  PANEL BACKGROUNDS }}
+  {{!  Bottom panel background }}
   {
     "class": "panel_control",
     "layer0.texture": "",
@@ -848,30 +779,27 @@
     "layer0.inner_margin": [2, 2, 2, 5],
     "layer0.opacity": 1.0
   },
-  // Quick panel background
+  {{!  Quick panel background }}
   {
     "class": "overlay_control",
     "layer0.texture": "",
     "layer0.tint": {{{panelBackground}}},
-    "layer0.inner_margin": [30, 30, 30, 30], // 9grid for the background
+    "layer0.inner_margin": [30, 30, 30, 30], {{!  9grid for the background }}
     "layer0.opacity": 1.0,
     "layer1.texture": "",
     "layer1.tint": {{{panelBackground}}},
     "layer1.inner_margin": [20, 40, 20, 20],
     "layer1.opacity": 1.0,
-    "content_margin": [0, 0, 0, 0] // content margin
+    "content_margin": [0, 0, 0, 0] {{!  content margin }}
   },
-  // Square tabs modify height, move content margin for quick panel
+  {{!  Square tabs modify height, move content margin for quick panel }}
   {
     "class": "overlay_control",
     "settings": ["itg_square_tabs"],
     "content_margin": [20, 4, 20, 26]
   },
 
-//
-// QUICK PANEL
-//
-
+{{!  QUICK PANEL }}
   {
     "class": "quick_panel",
     "row_padding": [5, 2],
@@ -911,10 +839,7 @@
     "selected_fg": {{{white}}}
   },
 
-//
-// MINI QUICK PANEL
-//
-
+{{!  MINI QUICK PANEL }}
   {
     "class": "mini_quick_panel_row",
     "layer0.texture": "",
@@ -929,9 +854,7 @@
     "layer0.tint": {{{primaryColor}}}
   },
 
-//
-// CODE COMPLETION DROPDOWN
-//
+{{!  CODE COMPLETION DROPDOWN }}
   {
     "class": "popup_control",
     "content_margin": [0, 0]
@@ -948,7 +871,7 @@
     "bg": {{{panelSelectedBackground}}},
     "selected_bg": {{{panelSelectedBackground}}},
 
-    // text
+    {{!  text }}
     "fg": {{{panelTextColor}}},
     "match_fg": {{{panelMatchTextColor}}},
     "selected_fg": {{{panelSelectedTextColor}}},
@@ -967,9 +890,8 @@
     "layer0.opacity": 1.0
   },
 
-  //
-  // BUTTONS
-  // :: DEFAULT
+  {{!  BUTTONS }}
+  {{!  :: DEFAULT }}
   {
     "class": "icon_button_control",
     "layer0.texture": "",
@@ -981,21 +903,21 @@
     "content_margin": [6, 6]
   },
 
-  //
-  // :: HOVER
+
+  {{!  :: HOVER }}
   {
     "class": "icon_button_control",
     "attributes": ["hover"],
     "layer0.texture": "",
     "layer0.tint": {{{sidebarSettings.hover.backgroundColor}}}
   },
-  // :: HOVER :: SELECTED
+  {{!  :: HOVER :: SELECTED }}
   {
     "class": "icon_button_control",
     "attributes": ["selected", "hover"],
     "layer0.tint": {{{sidebarSettings.selected.backgroundColor}}}
   },
-  // :: SELECTED
+  {{!  :: SELECTED }}
   {
     "class": "icon_button_control",
     "attributes": ["selected"],
@@ -1003,12 +925,8 @@
     "layer0.tint": {{{sidebarSettings.selected.backgroundColor}}}
   },
 
-//
-// BOTTOM PANEL ICONS - GROUP 1
-//
-
-  //
-  // Regex search button
+{{!  BOTTOM PANEL ICONS - GROUP 1 }}
+  {{!  Regex search button }}
   {
     "class": "icon_regex",
     "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}{{{icons.panelRegexIcon}}}",
@@ -1027,8 +945,7 @@
     "layer0.tint": {{{sidebarSettings.hover.textColor}}}
   },
 
-  //
-  // Case sensitive search button
+  {{!  Case sensitive search button }}
   {
     "class": "icon_case",
     "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}{{{icons.panelCaseIcon}}}",
@@ -1047,8 +964,7 @@
     "layer0.tint": {{{sidebarSettings.hover.textColor}}}
   },
 
-  //
-  // Match whole word search button
+  {{!  Match whole word search button }}
   {
     "class": "icon_whole_word",
     "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}{{{icons.panelWordIcon}}}",
@@ -1067,12 +983,8 @@
     "layer0.tint": {{{sidebarSettings.hover.textColor}}}
   },
 
-//
-// BOTTOM PANEL ICONS - GROUP 1 (EXTENDED: FIND IN FILES)
-//
-
-  //
-  // Show search context button
+{{!  BOTTOM PANEL ICONS - GROUP 1 (EXTENDED: FIND IN FILES) }}
+  {{!  Show search context button }}
   {
     "class": "icon_context",
     "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}{{{icons.panelContextIcon}}}",
@@ -1091,8 +1003,7 @@
     "layer0.tint": {{{sidebarSettings.hover.textColor}}}
   },
 
-  //
-  // Use search buffer
+  {{!  Use search buffer }}
   {
     "class": "icon_use_buffer",
     "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}{{{icons.panelBufferIcon}}}",
@@ -1111,12 +1022,8 @@
     "layer0.tint": {{{sidebarSettings.hover.textColor}}}
   },
 
-//
-// BOTTOM PANEL ICONS - GROUP 2
-//
-
-  //
-  // Reverse search direction button
+{{!  BOTTOM PANEL ICONS - GROUP 2 }}
+  {{!  Reverse search direction button }}
   {
     "class": "icon_reverse",
     "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}{{{icons.panelReverseIcon}}}",
@@ -1135,8 +1042,7 @@
     "layer0.tint": {{{sidebarSettings.hover.textColor}}}
   },
 
-  //
-  // Search wrap button
+  {{!  Search wrap button }}
   {
     "class": "icon_wrap",
     "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}{{{icons.panelWrapIcon}}}",
@@ -1155,8 +1061,7 @@
     "layer0.tint": {{{sidebarSettings.hover.textColor}}}
   },
 
-  //
-  // Search in selection button
+  {{!  Search in selection button }}
   {
     "class": "icon_in_selection",
     "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}{{{icons.panelSelectedIcon}}}",
@@ -1175,12 +1080,9 @@
     "layer0.tint": {{{sidebarSettings.hover.textColor}}}
   },
 
-//
-// BOTTOM PANEL ICONS - GROUP 3
-//
+{{!  BOTTOM PANEL ICONS - GROUP 3 }}
 
-  //
-  // Preserve case button
+  {{!  Preserve case button }}
   {
     "class": "icon_preserve_case",
     "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}{{{icons.panelPreserveIcon}}}",
@@ -1198,12 +1100,9 @@
     "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
     "layer0.tint": {{{sidebarSettings.hover.textColor}}}
   },
-//
-// BOTTOM PANEL ICONS - GROUP 4
-//
+{{!  BOTTOM PANEL ICONS - GROUP 4 }}
 
-  //
-  // Highlight results button
+  {{!  Highlight results button }}
   {
     "class": "icon_highlight",
     "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}{{{icons.panelHighlightIcon}}}",
