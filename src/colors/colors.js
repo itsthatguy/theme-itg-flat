@@ -1,7 +1,7 @@
-_ = require('underscore');
+_ = require('lodash');
 
 var defaults = function(defaultColors) {
-  return _.extend({
+  return _.merge({
     // General
     iconPath: "Theme - itg.flat/assets/",
     iconPathGroup: "",
