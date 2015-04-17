@@ -8,7 +8,7 @@ var config = {
   colors: {
     src: [
       "./src/colors/**/*.js",
-      "!./src/colors/**/{base,colors}.js"
+      "!./src/colors/colors.js"
     ],
     fn: "./src/colors/colors.js"
   },
@@ -24,7 +24,12 @@ function lastItem(array) {
 
 function baseData(filepath) {
   var dirpath = path.dirname(filepath);
+  if (colorFileName(dirpath) === 'colors') return {};
   return require(path.join(dirpath, 'base.js'));
+}
+
+function colorData(filepath) {
+  return require(filepath) || {};
 }
 
 function parentDir(filepath) {
@@ -37,24 +42,32 @@ function colorFileName(filepath) {
 }
 
 function composeName(filepath) {
+  var colorName = ('.' + colorFileName(filepath))
+    .replace('.base', '');
+
   return 'itg.flat.' +
-    parentDir(filepath) +
-    '.' +
-    colorFileName(filepath) +
-    '.sublime-theme';
+         parentDir(filepath) +
+         colorName +
+         '.sublime-theme';
 }
 
 gulp.task('compile', function() {
-  gulp.src(config.colors.src)
+  console.log("Generating: ");
+  return gulp.src(config.colors.src)
   .pipe(tap(function(file,t) {
     var base = baseData(file.path);
-    var data = require(file.path);
+    var data = colorData(file.path);
     var newName = composeName(file.path);
-    var colors = require(config.colors.fn)(base, data);
+    var colors = require(config.colors.fn)(base, data || {});
+
+    console.log("  " + newName);
 
     gulp.src(config.mustache.src)
     .pipe(mustache(colors))
     .pipe(rename(newName))
     .pipe(gulp.dest(config.mustache.dest));
   }));
+
 });
+
+gulp.task('default', ['compile']);
