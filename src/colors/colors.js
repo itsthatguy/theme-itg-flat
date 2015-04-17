@@ -1,7 +1,7 @@
 _ = require('underscore');
 
 var defaults = function(defaultColors) {
-  return {
+  return _.extend({
     // General
     iconPath: "Theme - itg.flat/assets/",
     iconPathGroup: "",
@@ -136,7 +136,7 @@ var defaults = function(defaultColors) {
 
     // Minimap
     minimapBackground: "[65, 69, 78, 165]"
-  };
+  }, defaultColors);
 };
 
 module.exports = function(base, data) {
