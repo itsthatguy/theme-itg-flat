@@ -65,13 +65,13 @@ var defaults = function(defaultColors) {
         },
         active: {
           color: defaultColors.dark,
-          hoverColor: defaultColors.RED,
+          hoverColor: defaultColors.red,
           dirtyColor: defaultColors.darkYellow,
           defaultOpacity: 0.4,
           hoverOpacity: 0.6
         },
         hover: {
-          hoverColor: defaultColors.RED,
+          hoverColor: defaultColors.red,
           dirtyColor: defaultColors.darkYellow,
           hoverOpacity: 1.0
         }
@@ -95,7 +95,7 @@ var defaults = function(defaultColors) {
         },
         hover: {
           color: defaultColors.white,
-          hoverColor: defaultColors.RED,
+          hoverColor: defaultColors.red,
           defaultOpacity: 0.4,
           hoverOpacity: 1.0
         }
