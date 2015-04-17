@@ -81,6 +81,10 @@
   {
     "class": "tab_close_button",
     "content_margin": [10, 0],
+<<<<<<< HEAD
+=======
+    // Tab close default settings
+>>>>>>> updated main file of colors
     "layer0.texture": "Theme - itg.flat/assets/close.png",
     "layer0.tint": [255, 255, 255, 200],
     "layer0.opacity": 0.3,
@@ -147,7 +151,11 @@
     "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
     "attributes": ["hover"],
     "layer0.texture": "Theme - itg.flat/assets/close.png",
+<<<<<<< HEAD
     "layer0.tint": [243, 86, 86],
+=======
+    "layer0.tint": ,
+>>>>>>> updated main file of colors
     "layer0.opacity": 1.0
   },
   {
@@ -222,7 +230,11 @@
   {
     "class": "puck_control",
     "layer0.texture": "Theme - itg.flat/assets/standard-puck-vertical.png",
+<<<<<<< HEAD
     "layer0.tint": [255, 255, 255, 200],
+=======
+    "layer0.tint": ,
+>>>>>>> updated main file of colors
     "layer0.opacity": 1.0,
     "layer0.inner_margin": [2, 4],
     "content_margin": [2, 12],
@@ -232,7 +244,11 @@
     "class": "puck_control",
     "attributes": ["horizontal"],
     "layer0.texture": "Theme - itg.flat/assets/standard-puck-horizontal.png",
+<<<<<<< HEAD
     "layer0.tint": [255, 255, 255, 200],
+=======
+    "layer0.tint": ,
+>>>>>>> updated main file of colors
     "layer0.opacity": 1.0,
     "layer0.inner_margin": [4, 2],
     "content_margin": [12, 2],
@@ -506,7 +522,11 @@
   {
     "class": "close_button",
     "layer0.texture": "Theme - itg.flat/assets/close.png",
+<<<<<<< HEAD
     "layer0.tint": [91, 84, 81, 255],
+=======
+    "layer0.tint": [91,  84,  81, 255],
+>>>>>>> updated main file of colors
     "layer0.opacity": 0,
     "layer0.inner_margin": 0,
     "layer1.texture": "",
@@ -570,7 +590,11 @@
     "attributes": ["hover", "dirty"],
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
     "layer0.texture": "Theme - itg.flat/assets/close.png",
+<<<<<<< HEAD
     "layer0.tint": [243, 86, 86]
+=======
+    "layer0.tint": 
+>>>>>>> updated main file of colors
   },
   {
     "class": "close_button",
@@ -1017,5 +1041,42 @@
     "class": "icon_highlight",
     "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
     "layer0.tint": [255, 255, 255, 200]
+<<<<<<< HEAD
+=======
+  },
+  {
+      "class": "icon_file_type",
+      // layer0.texture is filled in by code with the relevant icon name
+      "layer0.opacity": 1.0,
+      "content_margin": 0
+  },
+  //          STATE HIDDEN 1
+  {
+      "class": "icon_folder",
+      "settings" : ["itg_hide_folders"],
+      "content_margin" : 0
+  },
+  //          STATE HIDDEN 2
+  {
+      "class": "icon_file_type",
+      "settings" : ["itg_show_file_icons"],
+      "content_margin" : [8, 8],
+      "layer0.opacity" : 1.0
+  },
+  {
+    "class": "icon_folder",
+    "layer0.texture": "Theme - itg.flat/assets/group-closed.png",
+    "content_margin": [8,5]
+  },
+  {
+    "class": "icon_folder",
+    "parents": [{"attributes": ["expanded"]}],
+    "layer0.texture": "Theme - itg.flat/assets/group-open.png",
+    "content_margin": [8,5]
+  },
+  {
+    "class": "icon_folder_loading",
+    "content_margin": [0,0]
+>>>>>>> updated main file of colors
   }
 ]
