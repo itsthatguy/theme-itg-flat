@@ -1,8 +1,7 @@
-_ = require('underscore');
+_ = require('lodash');
 
 var defaults = function(defaultColors) {
-  console.log(defaultColors);
-  return {
+  return _.merge({
     // General
     iconPath: "Theme - itg.flat/assets/",
     iconPathGroup: "",
@@ -66,13 +65,13 @@ var defaults = function(defaultColors) {
         },
         active: {
           color: defaultColors.dark,
-          hoverColor: defaultColors.RED,
+          hoverColor: defaultColors.red,
           dirtyColor: defaultColors.darkYellow,
           defaultOpacity: 0.4,
           hoverOpacity: 0.6
         },
         hover: {
-          hoverColor: defaultColors.RED,
+          hoverColor: defaultColors.red,
           dirtyColor: defaultColors.darkYellow,
           hoverOpacity: 1.0
         }
@@ -96,7 +95,7 @@ var defaults = function(defaultColors) {
         },
         hover: {
           color: defaultColors.white,
-          hoverColor: defaultColors.RED,
+          hoverColor: defaultColors.red,
           defaultOpacity: 0.4,
           hoverOpacity: 1.0
         }
@@ -137,7 +136,7 @@ var defaults = function(defaultColors) {
 
     // Minimap
     minimapBackground: "[65, 69, 78, 165]"
-  };
+  }, defaultColors);
 };
 
 module.exports = function(base, data) {
