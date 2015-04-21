@@ -1,7 +1,19 @@
+// COLORS
+//
+// Black : [39, 40, 34]
+// Pink : [249, 38, 114]
+// Blue : [102, 217, 239] 
+// Purple : [174, 129, 255]
+// Green : [166, 226, 46]
+// Orange : [253, 151, 31]
+
+
+
 //
 // TABS
 //
 // Tab set
+
 [
   {
     "class": "tabset_control",
@@ -144,7 +156,7 @@
     "class": "tab_close_button",
     "attributes": ["hover"],
     "parents": [{"class": "tab_control", "attributes": ["hover"]}],
-    "layer0.tint": [243, 86, 86]
+    "layer0.tint": [249, 38, 114]
     // "layer0.opacity": 1.0
   },
   // Tab dirty button
@@ -152,7 +164,7 @@
     "class": "tab_close_button",
     "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
     "layer0.texture": "theme-itg-flat/assets/file-dirty.png",
-    "layer0.tint": [254, 209, 0, 255],
+    "layer0.tint": [253, 151, 31],
     "layer0.opacity": 1.0
   },
 
@@ -161,7 +173,7 @@
     "class": "tab_close_button",
     "parents": [{"class": "tab_control", "attributes": ["dirty", "selected"]}],
     "layer0.texture": "theme-itg-flat/assets/file-dirty.png",
-    "layer0.tint": [205, 135, 0],
+    "layer0.tint": [253, 151, 31],
     "layer0.opacity": 1.0
   },
   // Tab dirty button hover
@@ -169,7 +181,7 @@
     "class": "tab_close_button",
     "parents": [{"class": "tab_control", "attributes": ["dirty", "hover"]}],
     "layer0.texture": "theme-itg-flat/assets/file-dirty.png",
-    "layer0.tint": [205, 135, 0],
+    "layer0.tint": [253, 151, 31],
     "layer0.opacity": 1.0
   },
   {
@@ -178,7 +190,7 @@
     "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
     "attributes": ["hover"],
     "layer0.texture": "theme-itg-flat/assets/close.png",
-    "layer0.tint": [243, 86, 86],
+    "layer0.tint": [249, 38, 114],
     "layer0.opacity": 1.0
   },
   // {
@@ -467,7 +479,7 @@
   {
     "class": "tool_tip_control",
     "layer0.texture": "",
-    "layer0.tint": [243, 86, 86],
+    "layer0.tint": [174, 129, 255],
     "layer0.inner_margin": [1, 1],
     "layer0.opacity": 0.95,
     "content_margin": [10, 10]
@@ -656,7 +668,7 @@
     "class": "close_button",
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
     "attributes": ["hover"],
-    "layer0.tint": [243, 86, 86],
+    "layer0.tint": [249, 38, 114],
     "layer0.opacity": 1.0
   },
 
@@ -683,7 +695,7 @@
     "class": "close_button",
     "attributes": ["dirty"],
     "layer0.texture": "theme-itg-flat/assets/file-dirty.png",
-    "layer0.tint": [254, 209, 0, 255],
+    "layer0.tint": [253, 151, 31],
     "layer0.opacity": 1.0
   },
   {
@@ -691,7 +703,7 @@
     "attributes": ["dirty"],
     "parents": [{"class": "tree_row", "attributes": ["selected"]}],
     "layer0.texture": "theme-itg-flat/assets/file-dirty.png",
-    "layer0.tint": [254, 209, 0, 255],
+    "layer0.tint": [253, 151, 31],
     "layer0.opacity": 1.0
   },
 
@@ -706,7 +718,7 @@
     "attributes": ["hover", "dirty"],
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
     "layer0.texture": "theme-itg-flat/assets/close.png",
-    "layer0.tint": [243, 86, 86]
+    "layer0.tint": [249, 38, 114]
   },
   {
     "class": "close_button",
@@ -798,7 +810,7 @@
     // Pressed button state
     "class": "button_control",
     "attributes": ["pressed", "hover"],
-    "layer0.tint": [243, 86, 86]
+    "layer0.tint": [249, 38, 114]
   },
   {
     "class": "label_control",
@@ -877,20 +889,20 @@
     "class": "quick_panel_row",
     "attributes": ["selected"],
     "layer0.texture": "",
-    "layer0.tint": [243, 86, 86]
+    "layer0.tint": [174, 129, 255]
   },
   {
     "class": "quick_panel_label",
     "fg": [180, 180, 180],
     "match_fg": [255, 255, 255, 200],
-    "selected_fg": [252, 174, 174],
+    "selected_fg": [174, 129, 255],
     "selected_match_fg": [255, 255, 255, 200]
   },
   {
     "class": "quick_panel_path_label",
     "fg": [180, 180, 180],
     "match_fg": [255, 255, 255, 200],
-    "selected_fg": [252, 174, 174],
+    "selected_fg": [174, 129, 255],
     "selected_match_fg": [255, 255, 255, 200]
   },
   {
@@ -914,7 +926,7 @@
     "class": "mini_quick_panel_row",
     "attributes": ["selected"],
     "layer0.texture": "",
-    "layer0.tint": [243, 86, 86]
+    "layer0.tint": [174, 129, 255]
   },
 
 //
@@ -934,12 +946,12 @@
   {
     "class": "auto_complete_label",
     "bg": [243, 86, 86],
-    "selected_bg": [243, 86, 86],
+    "selected_bg": [174, 129, 255],
 
     // text
     "fg": [180, 180, 180],
     "match_fg": [255, 255, 255, 200],
-    "selected_fg": [252, 174, 174],
+    "selected_fg": [174, 129, 255],
     "selected_match_fg": [255, 255, 255, 200]
   },
   {
@@ -951,7 +963,7 @@
   {
     "class": "table_row",
     "attributes": ["selected"],
-    "layer0.tint": [243, 86, 86],
+    "layer0.tint": [174, 129, 255],
     "layer0.opacity": 1.0
   },
 
@@ -981,14 +993,14 @@
   {
     "class": "icon_button_control",
     "attributes": ["selected", "hover"],
-    "layer0.tint": [243, 86, 86]
+    "layer0.tint": [249, 38, 114]
   },
   // :: SELECTED
   {
     "class": "icon_button_control",
     "attributes": ["selected"],
     "layer0.texture": "",
-    "layer0.tint": [243, 86, 86]
+    "layer0.tint": [249, 38, 114]
   },
 
 //
