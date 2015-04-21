@@ -1,5 +1,5 @@
 var defaultColors = {
-  red               : "[243, 86,  86]",
+  red               : "[243, 86, 86]",
   lightPrimaryColor : "[252, 174, 174]"
 };
 
