@@ -993,14 +993,14 @@
   {
     "class": "icon_button_control",
     "attributes": ["selected", "hover"],
-    "layer0.tint": [249, 38, 114]
+    "layer0.tint": [102, 217, 239]
   },
   // :: SELECTED
   {
     "class": "icon_button_control",
     "attributes": ["selected"],
     "layer0.texture": "",
-    "layer0.tint": [249, 38, 114]
+    "layer0.tint": [102, 217, 239]
   },
 
 //
