@@ -1,6 +1,6 @@
-# Theme - itg.flat [![Build Status](https://travis-ci.org/itsthatguy/theme-itg-flat.svg)](https://travis-ci.org/itsthatguy/theme-itg-flat)
+# Theme - itg.flat [![Build Status](https://travis-ci.org/itsthatguy/theme-itg-flat.svg)](https://travis-ci.org/itsthatguy/theme-itg-flat) [![Join the chat at https://gitter.im/itsthatguy/theme-itg-flat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/itsthatguy/theme-itg-flat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-[![Join the chat at https://gitter.im/itsthatguy/theme-itg-flat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/itsthatguy/theme-itg-flat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 
 *Update: Sublime text 2 and 3 now supported.*
 
