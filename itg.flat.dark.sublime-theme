@@ -830,7 +830,7 @@
   {
     "class": "text_line_control",
     "layer0.texture": "theme-itg-flat/assets/input.png",
-    "layer0.tint": [230, 230, 230],
+    "layer0.tint": [39, 40, 34],
     "layer0.opacity": 1.0,
     "layer0.inner_margin": [10,10,10,10],
     "content_margin": [4, 5, 15, 4]
