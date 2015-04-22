@@ -1,14 +1,4 @@
 module.exports = {
-  red               : "[243, 86, 86]",
-  yellow            : "[240, 200, 80, 255]",
-  darkYellow        : "[205, 135, 0]",
-  dark              : "[91, 84, 81, 255]",
-  white             : "[255, 255, 255, 200]",
-  lightWhite        : "[180, 180, 180]",
-  primaryDark       : "[65, 69, 78]",
-  primaryColor      : "[243, 86, 86]",
-  lightPrimaryColor : "[252, 174, 174]",
-
   iconPath: 'Theme - itg.flat/assets/',
   iconPathGroup: '',
   inputColor: '[230, 230, 230]',
@@ -122,5 +112,14 @@ module.exports = {
     darkContentColor: '[255, 255, 255, 200]',
     lightContentColor: '[255, 255, 255, 200]'
   },
-  minimapBackground: '[65, 69, 78, 165]'
-};
+  minimapBackground: '[65, 69, 78, 165]',
+  red: '[243, 86, 86]',
+  yellow: '[240, 200, 80, 255]',
+  darkYellow: '[205, 135, 0]',
+  dark: '[91, 84, 81, 255]',
+  white: '[255, 255, 255, 200]',
+  lightWhite: '[180, 180, 180]',
+  primaryDark: '[65, 69, 78]',
+  primaryColor: '[243, 86, 86]',
+  lightPrimaryColor: '[252, 174, 174]'
+}; 

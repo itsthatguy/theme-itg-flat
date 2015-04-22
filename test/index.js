@@ -2,22 +2,23 @@ var app      = require('../Gulpfile.js'),
     async    = require('async'),
     glob     = require('glob'),
     path     = require('path'),
+    _        = require('lodash'),
     gulp     = require('gulp');
 
 
 require.extensions['.sublime-theme'] = require.extensions['.json'];
-var expect = require("chai").expect;
-var tmpDir = path.join(process.cwd() + '/test/tmp/');
-var templatesDir = path.join(process.cwd() + '/test/templates/');
-var srcDir = path.join(process.cwd() + '/src/');
+var expect       = require("chai").expect,
+    tmpDir       = path.join(process.cwd() + '/test/tmp/'),
+    templatesDir = path.join(process.cwd() + '/test/templates/'),
+    srcDir       = path.join(process.cwd() + '/src/');
 
 describe('Compile', function() {
-  before(function(done) {
-    var config = { mustache: { dest: tmpDir } };
-    app.exec(config, done);
-  });
-
   describe('should generate valid JSON', function() {
+    before(function(done) {
+      var config = { mustache: { dest: tmpDir } };
+      app.exec(config, done);
+    });
+
     var files = glob.sync(tmpDir + '**/*.sublime-theme');
 
     async.each(files, function(file) {
@@ -54,4 +55,32 @@ describe('/src files', function() {
       done();
     });
   });
+});
+
+describe('I know how to merge', function() {
+
+  var templateData = function(colors) {
+  return {
+      foo: colors.red,
+      bar: 'foo'
+    };
+  };
+
+  var defaultColors = {
+    red: 'blue',
+    primaryColor: 'blue'
+  };
+
+  var newColors = {
+    primaryColor: 'green'
+  };
+
+  it('compare', function(done) {
+    var compared = _.merge(templateData(defaultColors), defaultColors, newColors);
+    console.log(compared);
+
+    // expect().to.deep.equal(data.merged);
+    done();
+  });
+
 });

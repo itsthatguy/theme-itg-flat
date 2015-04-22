@@ -1,9 +1,12 @@
 module.exports = {
-  tabsetBackground: '[178, 169, 165, 250]',
+  iconPath: 'Theme - itg.flat/assets/',
+  iconPathGroup: '',
+  inputColor: '[230, 230, 230]',
+  tabsetBackground: '[212, 205, 202, 255]',
   tabSettings: {
     inactive: {
-      textColor: '[255, 255, 255, 200]',
-      backgroundColor: '[178, 169, 165, 250]',
+      textColor: '[91, 84, 81, 255]',
+      backgroundColor: '[212, 205, 202, 255]',
       textBold: false
     },
     active: {
@@ -17,15 +20,10 @@ module.exports = {
       textBold: false
     }
   },
-  sidebarBackground: '[178, 169, 165, 250]',
+  tabCloseIcon: 'close.png',
+  sidebarBackground: '[212, 205, 202, 255]',
   sidebarSettings: {
-    headingTextColor: '[255, 255, 255, 200]',
-    deselected: {
-      backgroundColor: '[178, 169, 165, 250]',
-      textColor: '[255, 255, 255, 200]',
-      textHoverColor: '[255, 255, 255, 200]',
-      folderTextColor: '[255, 255, 255, 200]'
-    },
+    headingTextColor: '[91, 84, 81, 255]',
     hover: {
       backgroundColor: '[0,0,0,30]',
       textColor: '[255, 255, 255, 200]'
@@ -35,14 +33,20 @@ module.exports = {
       textColor: '[255, 255, 255, 200]',
       textHoverColor: '[255, 255, 255, 200]',
       folderTextColor: '[255, 255, 255, 200]'
+    },
+    deselected: {
+      backgroundColor: '[212, 205, 202, 255]',
+      textColor: '[91, 84, 81, 255]',
+      textHoverColor: '[91, 84, 81, 255]',
+      folderTextColor: '[91, 84, 81, 255]'
     }
   },
   closeIconSettings: {
     tabs: {
       inactive: {
-        color: '[255, 255, 255, 200]',
+        color: '[91, 84, 81, 255]',
         hoverColor: '[91, 84, 81, 255]',
-        dirtyColor: '[254, 209, 0, 255]',
+        dirtyColor: '[220, 150, 0]',
         defaultOpacity: 0.3,
         hoverOpacity: 0.6
       },
@@ -60,42 +64,33 @@ module.exports = {
       }
     },
     sidebar: {
-      deselected: {
-        dirtyColor: '[254, 209, 0, 255]',
-        color: '[91, 84, 81, 255]',
-        hoverColor: '[255, 255, 255, 200]',
-        defaultOpacity: 0,
-        hoverOpacity: 0
-      },
-      hover: {
-        color: '[255, 255, 255, 200]',
-        hoverColor: '[243, 86, 86]',
-        defaultOpacity: 0.4,
-        hoverOpacity: 1
-      },
       selected: {
         color: '[255, 255, 255, 200]',
         hoverColor: '[255, 255, 255, 200]',
         dirtyColor: '[254, 209, 0, 255]',
         defaultOpacity: 0.6,
         hoverOpacity: 1
+      },
+      deselected: {
+        color: '[91, 84, 81, 255]',
+        hoverColor: '[255, 255, 255, 200]',
+        dirtyColor: '[220, 150, 0]',
+        defaultOpacity: 0,
+        hoverOpacity: 0
+      },
+      hover: {
+        color: '[91, 84, 81, 255]',
+        hoverColor: '[180, 80, 80, 255]',
+        defaultOpacity: 0.4,
+        hoverOpacity: 1
       }
     }
   },
-  panelBackground: '[178, 169, 165, 250]',
-  panelTextColor: '[180, 180, 180]',
-  panelMatchTextColor: '[255, 255, 255, 200]',
-  panelSelectedTextColor: '[190, 168, 168]',
-  scrollbars: {
-    darkContentColor: '[255, 255, 255, 200]',
-    lightContentColor: '[255, 255, 255, 200]'
-  },
-  minimapBackground: '[65, 69, 78, 165]',
-  iconPath: 'Theme - itg.flat/assets/',
-  iconPathGroup: '',
-  inputColor: '[230, 230, 230]',
-  tabCloseIcon: 'close.png',
+  panelBackground: '[212, 205, 202, 255]',
   panelSelectedBackground: '[180, 80, 80, 255]',
+  panelTextColor: '[128, 119, 115, 250]',
+  panelMatchTextColor: '[91, 84, 81, 255]',
+  panelSelectedTextColor: '[212, 205, 202, 255]',
   panelSelectedMatchTextColor: '[255, 255, 255, 200]',
   icons: {
     sidebarGroupOpen: 'group-open.png',
@@ -113,6 +108,11 @@ module.exports = {
     panelWordIcon: 'icon-word.png',
     panelWrapIcon: 'icon-wrap.png'
   },
+  scrollbars: {
+    darkContentColor: '[255, 255, 255, 200]',
+    lightContentColor: '[91, 84, 81, 255]'
+  },
+  minimapBackground: '[212, 205, 202, 60]',
   red: '[243, 86, 86]',
   yellow: '[254, 209, 0, 255]',
   darkYellow: '[220, 150, 0]',
@@ -124,4 +124,4 @@ module.exports = {
   secondaryDark: '[128, 119, 115, 250]',
   primaryColor: '[180, 80, 80, 255]',
   lightPrimaryColor: '[190, 168, 168]'
-}
+};

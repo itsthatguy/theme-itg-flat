@@ -3,9 +3,7 @@ var sharedColors = {
   lightPrimaryColor : "[252, 174, 174]"
 };
 
-exports.templateData = {};
-
-exports.defaultColors = {
+var defaultColors = {
   red               : sharedColors.red,
   yellow            : "[240, 200, 80, 255]",
   darkYellow        : "[205, 135, 0]",
@@ -16,3 +14,5 @@ exports.defaultColors = {
   primaryColor      : sharedColors.red,
   lightPrimaryColor : sharedColors.lightPrimaryColor
 };
+
+module.exports = {defaultColors: defaultColors};

@@ -1,40 +1,32 @@
 var gulp     = require("gulp"),
     gutil    = require("gulp-util"),
+    glob     = require("glob"),
+    fs       = require("fs"),
     _        = require("lodash"),
     path     = require("path"),
-    tap      = require("gulp-tap"),
-    rename   = require("gulp-rename"),
-    mustache = require("gulp-mustache");
+    Mustache = require("mustache");
+
+var baseTemplateFn = require(path.join(process.cwd(), "src/base-template-data.js")),
+    compilerFn     = require(path.join(process.cwd(), "src/compiler.js"));
+
+var themeName;
+var log = gutil.log;
 
 var defaultConfig = {
-    colors: {
-      src: [
-        path.join(process.cwd(), "src/colors/**/*.js"),
-        "!" + path.join(process.cwd(), "src/colors/template-data.js")
-      ],
-    },
-    templateDataFn: path.join(process.cwd(), "src/colors/template-data.js"),
-    mustache: {
-      src: path.join(process.cwd(), "src/itg.flat.mustache"),
-      dest: process.cwd()
-    }
-  };
+  // colors: path.join(process.cwd(), "src/themes/colors/*.js"),
+  colors: path.join(process.cwd(), "src/themes/colors/*.js"),
+  themes: path.join(process.cwd(), "src/themes/*.js"),
+  // themes: path.join(process.cwd(), "src/themes/*.js"),
+  mustache: {
+    src: path.join(process.cwd(), "src/itg.flat.mustache"),
+    dest: process.cwd()
+  }
+};
 
 var compiler = {
 
-  baseData: function(filepath) {
-    var dirpath = path.dirname(filepath);
-    if (this.colorFileName(dirpath) === 'colors') return {};
-    return require(path.join(dirpath, 'base.js'));
-  },
-
-  colorData: function(filepath) {
-    return require(filepath);
-  },
-
-  parentDir: function(filepath) {
-    var dirpath = path.dirname(filepath);
-    return _.last(dirpath.split(path.sep));
+  themes: function() {
+    return glob.sync(defaultConfig.themes);
   },
 
   colorFileName: function(filepath) {
@@ -46,36 +38,39 @@ var compiler = {
       .replace('.base', '');
 
     return 'itg.flat.' +
-           this.parentDir(filepath) +
+           themeName +
            colorName +
            '.sublime-theme';
   },
 
   exec: function(config, cb) {
-    var log = gutil.log;
     if (cb) { log = function(){}; }
-    config = _.merge(defaultConfig, config);
+    defaultConfig = _.merge(defaultConfig, config);
+    var file = path.join(process.cwd(), "src/compiler.js");
 
-    log("Generating: ");
-    return gulp.src(config.colors.src)
-    .pipe(tap(function(file, t) {
-      var base = compiler.baseData(file.path);
-      var colors = compiler.colorData(file.path);
-      var newName = compiler.composeName(file.path);
-      var colors = require(config.templateDataFn)(base, colors || {});
+    compiler.themes().forEach(function(file) {
+      log("Generating: ");
 
-      log("  " + newName);
+      themeName = path.basename(file, '.js');
+      var theme = require(file);
+      glob.sync(defaultConfig.colors).forEach(function(f, t) {
+        var colors = require(f);
+        var templateData = compilerFn(baseTemplateFn, theme, colors);
+        var newName = compiler.composeName(f);
 
-      gulp.src(config.mustache.src)
-      .pipe(mustache(colors))
-      .pipe(rename(newName))
-      .pipe(gulp.dest(config.mustache.dest));
-    })
-    .on('end', function() {
-      if (cb) { cb(); }
-    }));
+        log("  " + newName);
+
+        var template = fs.readFileSync(defaultConfig.mustache.src, {encoding: 'utf-8'});
+        var stream = fs.createWriteStream(newName);
+        stream.once('open', function(fd) {
+          stream.write(Mustache.render(template, templateData));
+          stream.end();
+        });
+      });
+    });
+
+    if (cb) { cb(); }
   }
-
 };
 
 gulp.task('compile', compiler.exec);
