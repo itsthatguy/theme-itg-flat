@@ -1,22 +1,9 @@
 module.exports = {
-  red               : "[243, 86, 86]",
-  yellow            : "[240, 200, 80, 255]",
-  darkYellow        : "[205, 135, 0]",
-  dark              : "[91, 84, 81, 255]",
-  white             : "[255, 255, 255, 200]",
-  lightWhite        : "[180, 180, 180]",
-  primaryDark       : "[65, 69, 78]",
-  primaryColor      : "[243, 86, 86]",
-  lightPrimaryColor : "[252, 174, 174]",
-
-  iconPath: 'Theme - itg.flat/assets/',
-  iconPathGroup: '',
-  inputColor: '[230, 230, 230]',
-  tabsetBackground: '[65, 69, 78]',
+  tabsetBackground: '[178, 169, 165, 250]',
   tabSettings: {
     inactive: {
       textColor: '[255, 255, 255, 200]',
-      backgroundColor: '[65, 69, 78]',
+      backgroundColor: '[178, 169, 165, 250]',
       textBold: false
     },
     active: {
@@ -30,22 +17,21 @@ module.exports = {
       textBold: false
     }
   },
-  tabCloseIcon: 'close.png',
-  sidebarBackground: '[65, 69, 78]',
+  sidebarBackground: '[178, 169, 165, 250]',
   sidebarSettings: {
     headingTextColor: '[255, 255, 255, 200]',
+    deselected: {
+      backgroundColor: '[178, 169, 165, 250]',
+      textColor: '[255, 255, 255, 200]',
+      textHoverColor: '[255, 255, 255, 200]',
+      folderTextColor: '[255, 255, 255, 200]'
+    },
     hover: {
       backgroundColor: '[0,0,0,30]',
       textColor: '[255, 255, 255, 200]'
     },
     selected: {
-      backgroundColor: '[243, 86, 86]',
-      textColor: '[255, 255, 255, 200]',
-      textHoverColor: '[255, 255, 255, 200]',
-      folderTextColor: '[255, 255, 255, 200]'
-    },
-    deselected: {
-      backgroundColor: '[65, 69, 78]',
+      backgroundColor: '[180, 80, 80, 255]',
       textColor: '[255, 255, 255, 200]',
       textHoverColor: '[255, 255, 255, 200]',
       folderTextColor: '[255, 255, 255, 200]'
@@ -56,35 +42,28 @@ module.exports = {
       inactive: {
         color: '[255, 255, 255, 200]',
         hoverColor: '[91, 84, 81, 255]',
-        dirtyColor: '[240, 200, 80, 255]',
+        dirtyColor: '[254, 209, 0, 255]',
         defaultOpacity: 0.3,
         hoverOpacity: 0.6
       },
       active: {
         color: '[91, 84, 81, 255]',
         hoverColor: '[243, 86, 86]',
-        dirtyColor: '[205, 135, 0]',
+        dirtyColor: '[220, 150, 0]',
         defaultOpacity: 0.4,
         hoverOpacity: 0.6
       },
       hover: {
         hoverColor: '[243, 86, 86]',
-        dirtyColor: '[205, 135, 0]',
+        dirtyColor: '[220, 150, 0]',
         hoverOpacity: 1
       }
     },
     sidebar: {
-      selected: {
-        color: '[255, 255, 255, 200]',
-        hoverColor: '[255, 255, 255, 200]',
-        dirtyColor: '[240, 200, 80, 255]',
-        defaultOpacity: 0.6,
-        hoverOpacity: 1
-      },
       deselected: {
+        dirtyColor: '[254, 209, 0, 255]',
         color: '[91, 84, 81, 255]',
         hoverColor: '[255, 255, 255, 200]',
-        dirtyColor: '[240, 200, 80, 255]',
         defaultOpacity: 0,
         hoverOpacity: 0
       },
@@ -93,14 +72,30 @@ module.exports = {
         hoverColor: '[243, 86, 86]',
         defaultOpacity: 0.4,
         hoverOpacity: 1
+      },
+      selected: {
+        color: '[255, 255, 255, 200]',
+        hoverColor: '[255, 255, 255, 200]',
+        dirtyColor: '[254, 209, 0, 255]',
+        defaultOpacity: 0.6,
+        hoverOpacity: 1
       }
     }
   },
-  panelBackground: '[65, 69, 78]',
-  panelSelectedBackground: '[243, 86, 86]',
+  panelBackground: '[178, 169, 165, 250]',
   panelTextColor: '[180, 180, 180]',
   panelMatchTextColor: '[255, 255, 255, 200]',
-  panelSelectedTextColor: '[252, 174, 174]',
+  panelSelectedTextColor: '[190, 168, 168]',
+  scrollbars: {
+    darkContentColor: '[255, 255, 255, 200]',
+    lightContentColor: '[255, 255, 255, 200]'
+  },
+  minimapBackground: '[65, 69, 78, 165]',
+  iconPath: 'Theme - itg.flat/assets/',
+  iconPathGroup: '',
+  inputColor: '[230, 230, 230]',
+  tabCloseIcon: 'close.png',
+  panelSelectedBackground: '[180, 80, 80, 255]',
   panelSelectedMatchTextColor: '[255, 255, 255, 200]',
   icons: {
     sidebarGroupOpen: 'group-open.png',
@@ -118,9 +113,15 @@ module.exports = {
     panelWordIcon: 'icon-word.png',
     panelWrapIcon: 'icon-wrap.png'
   },
-  scrollbars: {
-    darkContentColor: '[255, 255, 255, 200]',
-    lightContentColor: '[255, 255, 255, 200]'
-  },
-  minimapBackground: '[65, 69, 78, 165]'
-};
+  red: '[243, 86, 86]',
+  yellow: '[254, 209, 0, 255]',
+  darkYellow: '[220, 150, 0]',
+  light: '[212, 205, 202, 255]',
+  dark: '[91, 84, 81, 255]',
+  white: '[255, 255, 255, 200]',
+  lightWhite: '[180, 180, 180]',
+  primaryDark: '[178, 169, 165, 250]',
+  secondaryDark: '[128, 119, 115, 250]',
+  primaryColor: '[180, 80, 80, 255]',
+  lightPrimaryColor: '[190, 168, 168]'
+}

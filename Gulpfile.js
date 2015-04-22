@@ -10,10 +10,10 @@ var defaultConfig = {
     colors: {
       src: [
         path.join(process.cwd(), "src/colors/**/*.js"),
-        "!" + path.join(process.cwd(), "src/colors/colors.js")
+        "!" + path.join(process.cwd(), "src/colors/template-data.js")
       ],
-      fn: path.join(process.cwd(), "src/colors/colors.js")
     },
+    templateDataFn: path.join(process.cwd(), "src/colors/template-data.js"),
     mustache: {
       src: path.join(process.cwd(), "src/itg.flat.mustache"),
       dest: process.cwd()
@@ -52,7 +52,7 @@ var compiler = {
   },
 
   exec: function(config, cb) {
-    var log = gutil.log
+    var log = gutil.log;
     if (cb) { log = function(){}; }
     config = _.merge(defaultConfig, config);
 
@@ -60,9 +60,9 @@ var compiler = {
     return gulp.src(config.colors.src)
     .pipe(tap(function(file, t) {
       var base = compiler.baseData(file.path);
-      var data = compiler.colorData(file.path);
+      var colors = compiler.colorData(file.path);
       var newName = compiler.composeName(file.path);
-      var colors = require(config.colors.fn)(base, data || {});
+      var colors = require(config.templateDataFn)(base, colors || {});
 
       log("  " + newName);
 

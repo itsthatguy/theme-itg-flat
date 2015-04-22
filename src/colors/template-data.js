@@ -140,5 +140,5 @@ var defaults = function(defaultColors) {
 };
 
 module.exports = function(base, data) {
-  return defaults(_.extend(base, data));
+  return _.merge(base.templateData, defaults(base.defaultColors));
 };

@@ -31,7 +31,7 @@ describe('Compile', function() {
 });
 
 var compareMerge = function(dir) {
-  var colorsFn = require(srcDir + 'colors/colors.js');
+  var colorsFn = require(srcDir + 'colors/template-data.js');
       base     = require(srcDir + 'colors/' + dir + '/base.js'),
       merged   = colorsFn(base, {}),
       template = require(templatesDir + dir + '.js');
@@ -40,17 +40,17 @@ var compareMerge = function(dir) {
 
 };
 
-describe('src', function() {
+describe('/src files', function() {
   describe('merges base data as expected', function() {
-    it('dark', function(done) {
+    it('from /dark/*', function(done) {
       var data = compareMerge('dark');
-      expect(data.merged).to.deep.equal(data.template);
+      expect(data.template).to.deep.equal(data.merged);
       done();
     });
 
-    it('light', function(done) {
+    it('from /light/*', function(done) {
       var data = compareMerge('light');
-      expect(data.merged).to.deep.equal(data.template);
+      expect(data.template).to.deep.equal(data.merged);
       done();
     });
   });
