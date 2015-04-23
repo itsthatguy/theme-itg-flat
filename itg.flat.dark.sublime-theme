@@ -119,7 +119,7 @@
     "class": "tab_close_button",
     "attributes": ["hover"],
     "parents": [{"class": "tab_control", "attributes": ["hover"]}],
-    "layer0.tint": [243, 86,  86]
+    "layer0.tint": [243, 86, 86]
   },
   {
     "class": "tab_close_button",
@@ -147,7 +147,7 @@
     "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
     "attributes": ["hover"],
     "layer0.texture": "Theme - itg.flat/assets/close.png",
-    "layer0.tint": [243, 86,  86],
+    "layer0.tint": [243, 86, 86],
     "layer0.opacity": 1.0
   },
   {
@@ -375,7 +375,7 @@
   {
     "class": "tool_tip_control",
     "layer0.texture": "",
-    "layer0.tint": [243, 86,  86],
+    "layer0.tint": [243, 86, 86],
     "layer0.inner_margin": [1, 1],
     "layer0.opacity": 0.95,
     "content_margin": [10, 10]
@@ -491,7 +491,7 @@
 
   {
     "class": "tree_row",
-    "layer0.tint": [243, 86,  86],
+    "layer0.tint": [243, 86, 86],
     "layer0.opacity": 1.0,
     "attributes": ["selected"]
   },
@@ -526,7 +526,7 @@
     "class": "close_button",
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
     "attributes": ["hover"],
-    "layer0.tint": [243, 86,  86],
+    "layer0.tint": [243, 86, 86],
     "layer0.opacity": 1
   },
 
@@ -570,7 +570,7 @@
     "attributes": ["hover", "dirty"],
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
     "layer0.texture": "Theme - itg.flat/assets/close.png",
-    "layer0.tint": [243, 86,  86]
+    "layer0.tint": [243, 86, 86]
   },
   {
     "class": "close_button",
@@ -649,7 +649,7 @@
   {
     "class": "button_control",
     "attributes": ["pressed", "hover"],
-    "layer0.tint": [243, 86,  86]
+    "layer0.tint": [243, 86, 86]
   },
   {
     "class": "label_control",
@@ -713,7 +713,7 @@
     "class": "quick_panel_row",
     "attributes": ["selected"],
     "layer0.texture": "",
-    "layer0.tint": [243, 86,  86]
+    "layer0.tint": [243, 86, 86]
   },
   {
     "class": "quick_panel_label",
@@ -746,7 +746,7 @@
     "class": "mini_quick_panel_row",
     "attributes": ["selected"],
     "layer0.texture": "",
-    "layer0.tint": [243, 86,  86]
+    "layer0.tint": [243, 86, 86]
   },
 
   {
@@ -762,8 +762,8 @@
   },
   {
     "class": "auto_complete_label",
-    "bg": [243, 86,  86],
-    "selected_bg": [243, 86,  86],
+    "bg": [243, 86, 86],
+    "selected_bg": [243, 86, 86],
 
     "fg": [180, 180, 180],
     "match_fg": [255, 255, 255, 200],
@@ -779,7 +779,7 @@
   {
     "class": "table_row",
     "attributes": ["selected"],
-    "layer0.tint": [243, 86,  86],
+    "layer0.tint": [243, 86, 86],
     "layer0.opacity": 1.0
   },
 
@@ -804,13 +804,13 @@
   {
     "class": "icon_button_control",
     "attributes": ["selected", "hover"],
-    "layer0.tint": [243, 86,  86]
+    "layer0.tint": [243, 86, 86]
   },
   {
     "class": "icon_button_control",
     "attributes": ["selected"],
     "layer0.texture": "",
-    "layer0.tint": [243, 86,  86]
+    "layer0.tint": [243, 86, 86]
   },
 
   {
