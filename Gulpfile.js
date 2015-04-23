@@ -45,6 +45,7 @@ var compiler = {
 
   exec: function(config, cb) {
     if (cb) { log = function(){}; }
+
     defaultConfig = _.merge(defaultConfig, config);
     var file = path.join(process.cwd(), "src/compiler.js");
 
