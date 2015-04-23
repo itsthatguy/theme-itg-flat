@@ -1,6 +1,6 @@
 describe('Mustache', function() {
 
-  beforeEach(function(done) {
+  before(function(done) {
     run('./node_modules/.bin/gulp --silence compile --test', function() {
       files = glob.sync(tmpDir + '**/*.sublime-theme');
       done();

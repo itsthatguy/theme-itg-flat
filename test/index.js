@@ -11,3 +11,9 @@ global.tmpDir       = path.join(process.cwd() + '/test/tmp/'),
 global.templatesDir = path.join(process.cwd() + '/test/templates/'),
 global.srcDir       = path.join(process.cwd() + '/src/');
 
+var fs = require('fs')
+
+fs.exists(tmpDir, function(exists) {
+  if (exists) { return; }
+  fs.mkdirSync(tmpDir);
+});
