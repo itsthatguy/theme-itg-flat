@@ -29,7 +29,7 @@ if (argv.test) {
 }
 
 
-var defaultConfig = {
+var config = {
   colorFiles: path.join(process.cwd(), "src/themes/colors/*.js"),
   themeFiles: path.join(process.cwd(), "src/themes/*.js"),
   mustache: {
@@ -41,11 +41,11 @@ var defaultConfig = {
 var compiler = {
 
   themes: function() {
-    return glob.sync(defaultConfig.themeFiles);
+    return glob.sync(config.themeFiles);
   },
 
   colors: function() {
-    return glob.sync(defaultConfig.colorFiles);
+    return glob.sync(config.colorFiles);
   },
 
   colorFileName: function(filepath) {
@@ -69,11 +69,11 @@ var compiler = {
         theme  = require(themeName || file),
         templateData = compilerFn(baseTemplateFn, theme, (colors.defaultColors || colors)),
         newName = compiler.composeName(file, themeName),
-        fileDest = path.join(defaultConfig.mustache.dest, newName);
+        fileDest = path.join(config.mustache.dest, newName);
 
     log("  " + newName);
 
-    var template = fs.readFileSync(defaultConfig.mustache.src, {encoding: 'utf-8'});
+    var template = fs.readFileSync(config.mustache.src, {encoding: 'utf-8'});
     var stream = fs.createWriteStream(fileDest);
     stream.once('open', function(fd) {
       stream.write(Mustache.render(template, templateData));
@@ -88,7 +88,6 @@ var compiler = {
 
     if (argv.test) { log = function(){}; }
 
-    defaultConfig = _.merge(defaultConfig, config);
     log("Generating: ");
 
     async.each(compiler.themes(), function(theme, next) {
