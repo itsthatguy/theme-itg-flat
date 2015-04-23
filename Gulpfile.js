@@ -1,6 +1,7 @@
 var gulp     = require("gulp"),
     gutil    = require("gulp-util"),
     glob     = require("glob"),
+    del      = require("del"),
     async    = require('async'),
     fs       = require("fs"),
     _        = require("lodash"),
@@ -105,7 +106,10 @@ var compiler = {
   }
 };
 
-gulp.task('compile', compiler.exec);
+gulp.task('compile', ['clean'], compiler.exec);
+gulp.task('clean', function(done) {
+  del(path.join(config.mustache.dest, '*.sublime-theme'), done)
+});
 gulp.task('default', ['compile']);
 
 module.exports = compiler;
