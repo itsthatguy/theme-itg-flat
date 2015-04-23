@@ -5,19 +5,36 @@ var gulp     = require("gulp"),
     fs       = require("fs"),
     _        = require("lodash"),
     path     = require("path"),
-    Mustache = require("mustache");
+    Mustache = require("mustache"),
+    argv     = require('yargs')
+    .help('h')
+    .alias('h', 'help')
+    .option('t', {
+        alias : 'test',
+        describe: 'Run gulp in the test environment',
+        type: 'boolean'
+    }).argv;
 
 var baseTemplateFn = require(path.join(process.cwd(), "src/base-template-data.js")),
     compilerFn     = require(path.join(process.cwd(), "src/compiler.js"));
 
 var log = gutil.log;
 
+if (argv.test) {
+  var outputDir = path.join(process.cwd() + '/test/tmp/');
+  // Prevent gulp from outputting messages while running in test
+  var gutil = require('gulp-util');
+  gutil.log = gutil.noop;
+  gutil.log = function() { return this; };
+}
+
+
 var defaultConfig = {
   colorFiles: path.join(process.cwd(), "src/themes/colors/*.js"),
   themeFiles: path.join(process.cwd(), "src/themes/*.js"),
   mustache: {
     src: path.join(process.cwd(), "src/itg.flat.mustache"),
-    dest: process.cwd()
+    dest: outputDir || process.cwd()
   }
 };
 
@@ -69,8 +86,7 @@ var compiler = {
 
   exec: function(config, done) {
 
-    if (done) { /*log = function(){};*/ }
-    else { done = function(){}; }
+    if (argv.test) { log = function(){}; }
 
     defaultConfig = _.merge(defaultConfig, config);
     log("Generating: ");
