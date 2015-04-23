@@ -119,7 +119,7 @@
     "class": "tab_close_button",
     "attributes": ["hover"],
     "parents": [{"class": "tab_control", "attributes": ["hover"]}],
-    "layer0.tint": [243, 86,  86]
+    "layer0.tint": [243, 86, 86]
   },
   {
     "class": "tab_close_button",
@@ -147,7 +147,7 @@
     "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
     "attributes": ["hover"],
     "layer0.texture": "Theme - itg.flat/assets/close.png",
-    "layer0.tint": [243, 86,  86],
+    "layer0.tint": [243, 86, 86],
     "layer0.opacity": 1.0
   },
   {
@@ -526,7 +526,7 @@
     "class": "close_button",
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
     "attributes": ["hover"],
-    "layer0.tint": [243, 86,  86],
+    "layer0.tint": [243, 86, 86],
     "layer0.opacity": 1
   },
 
@@ -570,7 +570,7 @@
     "attributes": ["hover", "dirty"],
     "parents": [{"class": "tree_row", "attributes": ["hover"]}],
     "layer0.texture": "Theme - itg.flat/assets/close.png",
-    "layer0.tint": [243, 86,  86]
+    "layer0.tint": [243, 86, 86]
   },
   {
     "class": "close_button",
