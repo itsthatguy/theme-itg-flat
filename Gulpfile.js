@@ -84,7 +84,7 @@ var compiler = {
     });
   },
 
-  exec: function(config, done) {
+  exec: function(config) {
 
     if (argv.test) { log = function(){}; }
 
@@ -92,18 +92,18 @@ var compiler = {
     log("Generating: ");
 
     async.each(compiler.themes(), function(theme, next) {
-      // console.log('err: ', err);
 
       // build base theme
       compiler.buildTheme(theme, undefined, function() {
-        log('done: ', done);
 
         // build theme color variations
         async.each(compiler.colors(), function(file, next) {
           compiler.buildTheme(file, theme, next);
         }, next);
       });
-    }, done);
+    });
+
+    return gulp.src(defaultConfig.mustache.dest);
   }
 };
 
