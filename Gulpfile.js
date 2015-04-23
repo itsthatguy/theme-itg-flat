@@ -84,7 +84,7 @@ var compiler = {
     });
   },
 
-  exec: function(config) {
+  exec: function(done) {
 
     if (argv.test) { log = function(){}; }
 
@@ -100,9 +100,8 @@ var compiler = {
           compiler.buildTheme(file, theme, next);
         }, next);
       });
-    });
+    }, done);
 
-    return gulp.src(defaultConfig.mustache.dest);
   }
 };
 
