@@ -32,10 +32,11 @@ describe('Compile', function() {
 });
 
 var compareMerge = function(dir) {
-  var colorsFn = require(srcDir + 'colors/template-data.js');
-      base     = require(srcDir + 'colors/' + dir + '/base.js'),
-      merged   = colorsFn(base, {}),
-      template = require(templatesDir + dir + '.js');
+  var colorsFn = require(srcDir + 'compiler.js');
+      base     = require(srcDir + 'base-template-data.js'),
+      theme    = require(srcDir + 'themes/' + dir + '.js'),
+      template = require(templatesDir + dir + '.js'),
+      merged   = colorsFn(base, theme);
 
   return {merged: merged, template: template};
 
