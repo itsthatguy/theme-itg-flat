@@ -5,52 +5,59 @@ var app      = require('../Gulpfile.js'),
     _        = require('lodash'),
     gulp     = require('gulp');
 
-
 require.extensions['.sublime-theme'] = require.extensions['.json'];
 var expect       = require("chai").expect,
     tmpDir       = path.join(process.cwd() + '/test/tmp/'),
     templatesDir = path.join(process.cwd() + '/test/templates/'),
-    srcDir       = path.join(process.cwd() + '/src/');
+    srcDir       = path.join(process.cwd() + '/src/'),
+    files;
 
-describe('Compile', function() {
-  describe('should generate valid JSON', function() {
-    before(function(done) {
-      var config = { mustache: { dest: tmpDir } };
-      app.exec(config, done);
-    });
-
-    var files = glob.sync(tmpDir + '**/*.sublime-theme');
-
-    async.each(files, function(file) {
-      it(path.basename(file), function(done) {
-        require(file);
-        done();
-      });
-    });
-
+async.each([1], function(item, done) {
+  var config = { mustache: { dest: tmpDir } };
+  app.exec(config, function() {
+    files = glob.sync(tmpDir + '**/*.sublime-theme');
+    done();
   });
-});
+}, buildTests);
+
+function buildTests() {
+  describe('Compile', function() {
+    describe('should generate valid JSON', function() {
+      console.log(files);
+
+      async.each(files, function(file, callback) {
+        it(path.basename(file), function(done) {
+          expect(require(file)).to.be.ok;
+          callback();
+          done();
+        });
+      });
+
+    });
+  });
+}
 
 var compareMerge = function(dir) {
-  var colorsFn = require(srcDir + 'compiler.js');
-      base     = require(srcDir + 'base-template-data.js'),
+  var colorsFn = require(srcDir + 'compiler.js'),
+      baseFn   = require(srcDir + 'base-template-data.js'),
       theme    = require(srcDir + 'themes/' + dir + '.js'),
-      template = require(templatesDir + dir + '.js'),
-      merged   = colorsFn(base, theme);
+      merged   = colorsFn(baseFn, theme, theme.defaultColors),
+      template = require(templatesDir + dir + '.js');
 
-  return {merged: merged, template: template};
-
+  return {template: template, merged: merged};
 };
 
-describe('/src files', function() {
+describe('/src/theme/ files', function() {
   describe('merges base data as expected', function() {
-    it('from /dark/*', function(done) {
+    it('from /dark.js', function(done) {
       var data = compareMerge('dark');
+      console.log(data.template.primaryColor);
+      console.log(data.merged.primaryColor);
       expect(data.template).to.deep.equal(data.merged);
       done();
     });
 
-    it('from /light/*', function(done) {
+    it('from /light.js', function(done) {
       var data = compareMerge('light');
       expect(data.template).to.deep.equal(data.merged);
       done();
@@ -58,10 +65,10 @@ describe('/src files', function() {
   });
 });
 
-describe('I know how to merge', function() {
+describe('_.merge() works as expected', function() {
 
   var templateData = function(colors) {
-  return {
+    return {
       foo: colors.red,
       bar: 'foo'
     };
@@ -76,11 +83,12 @@ describe('I know how to merge', function() {
     primaryColor: 'green'
   };
 
+  var template = { foo: 'blue', bar: 'foo', red: 'blue', primaryColor: 'green' };
+
   it('compare', function(done) {
     var compared = _.merge(templateData(defaultColors), defaultColors, newColors);
-    console.log(compared);
 
-    // expect().to.deep.equal(data.merged);
+    expect(compared).to.deep.equal(template);
     done();
   });
 

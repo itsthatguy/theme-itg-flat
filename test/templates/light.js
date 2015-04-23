@@ -88,7 +88,7 @@ module.exports = {
   },
   panelBackground: '[212, 205, 202, 255]',
   panelSelectedBackground: '[180, 80, 80, 255]',
-  panelTextColor: '[128, 119, 115, 250]',
+  panelTextColor: '[91, 84, 81, 255]',
   panelMatchTextColor: '[91, 84, 81, 255]',
   panelSelectedTextColor: '[212, 205, 202, 255]',
   panelSelectedMatchTextColor: '[255, 255, 255, 200]',

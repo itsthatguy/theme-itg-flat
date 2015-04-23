@@ -1,6 +1,7 @@
 var gulp     = require("gulp"),
     gutil    = require("gulp-util"),
     glob     = require("glob"),
+    async    = require('async'),
     fs       = require("fs"),
     _        = require("lodash"),
     path     = require("path"),
@@ -9,14 +10,11 @@ var gulp     = require("gulp"),
 var baseTemplateFn = require(path.join(process.cwd(), "src/base-template-data.js")),
     compilerFn     = require(path.join(process.cwd(), "src/compiler.js"));
 
-var themeName;
 var log = gutil.log;
 
 var defaultConfig = {
-  // colors: path.join(process.cwd(), "src/themes/colors/*.js"),
-  colors: path.join(process.cwd(), "src/themes/colors/*.js"),
-  themes: path.join(process.cwd(), "src/themes/*.js"),
-  // themes: path.join(process.cwd(), "src/themes/*.js"),
+  colorFiles: path.join(process.cwd(), "src/themes/colors/*.js"),
+  themeFiles: path.join(process.cwd(), "src/themes/*.js"),
   mustache: {
     src: path.join(process.cwd(), "src/itg.flat.mustache"),
     dest: process.cwd()
@@ -26,51 +24,70 @@ var defaultConfig = {
 var compiler = {
 
   themes: function() {
-    return glob.sync(defaultConfig.themes);
+    return glob.sync(defaultConfig.themeFiles);
+  },
+
+  colors: function() {
+    return glob.sync(defaultConfig.colorFiles);
   },
 
   colorFileName: function(filepath) {
-    return path.basename(filepath, '.js');
+    return (path.basename(filepath, '.js') || 'foo');
   },
 
-  composeName: function(filepath) {
+  composeName: function(filepath, themeName) {
+    var themeName = this.colorFileName(themeName);
     var colorName = ('.' + this.colorFileName(filepath))
       .replace('.base', '');
 
-    return 'itg.flat.' +
+    return ('itg.flat.' +
            themeName +
            colorName +
-           '.sublime-theme';
+           '.sublime-theme').replace('.undefined', '');
   },
 
-  exec: function(config, cb) {
-    if (cb) { log = function(){}; }
+  buildTheme: function(file, themeName, next) {
+
+    var colors = require(file),
+        theme  = require(themeName || file),
+        templateData = compilerFn(baseTemplateFn, theme, (colors.defaultColors || colors)),
+        newName = compiler.composeName(file, themeName),
+        fileDest = path.join(defaultConfig.mustache.dest, newName);
+
+    log("  " + newName);
+
+    var template = fs.readFileSync(defaultConfig.mustache.src, {encoding: 'utf-8'});
+    var stream = fs.createWriteStream(fileDest);
+    stream.once('open', function(fd) {
+      stream.write(Mustache.render(template, templateData));
+      stream.end();
+    });
+    stream.on('close', function() {
+      if (next) next();
+    });
+  },
+
+  exec: function(config, done) {
+
+    if (done) { /*log = function(){};*/ }
+    else { done = function(){}; }
 
     defaultConfig = _.merge(defaultConfig, config);
-    var file = path.join(process.cwd(), "src/compiler.js");
+    log("Generating: ");
 
-    compiler.themes().forEach(function(file) {
-      log("Generating: ");
+    async.each(compiler.themes(), function(theme, next) {
+      // console.log('err: ', err);
 
-      themeName = path.basename(file, '.js');
-      var theme = require(file);
-      glob.sync(defaultConfig.colors).forEach(function(f, t) {
-        var colors = require(f);
-        var templateData = compilerFn(baseTemplateFn, theme, colors);
-        var newName = compiler.composeName(f);
+      // build base theme
+      compiler.buildTheme(theme, undefined, function() {
+        log('done: ', done);
 
-        log("  " + newName);
-
-        var template = fs.readFileSync(defaultConfig.mustache.src, {encoding: 'utf-8'});
-        var stream = fs.createWriteStream(newName);
-        stream.once('open', function(fd) {
-          stream.write(Mustache.render(template, templateData));
-          stream.end();
-        });
+        // build theme color variations
+        async.each(compiler.colors(), function(file, next) {
+          compiler.buildTheme(file, theme, next);
+        }, next);
       });
-    });
-
-    if (cb) { cb(); }
+    }, done);
   }
 };
 

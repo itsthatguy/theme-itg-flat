@@ -122,4 +122,4 @@ module.exports = {
   primaryDark: '[65, 69, 78]',
   primaryColor: '[243, 86, 86]',
   lightPrimaryColor: '[252, 174, 174]'
-}; 
+};
