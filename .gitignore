@@ -8,4 +8,4 @@
 *.psd
 
 node_modules/
-test/tmp/
+test/tmp/*

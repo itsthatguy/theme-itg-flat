@@ -1,84 +1,115 @@
 var gulp     = require("gulp"),
     gutil    = require("gulp-util"),
+    glob     = require("glob"),
+    del      = require("del"),
+    async    = require('async'),
+    fs       = require("fs"),
     _        = require("lodash"),
     path     = require("path"),
-    tap      = require("gulp-tap"),
-    rename   = require("gulp-rename"),
-    mustache = require("gulp-mustache");
+    Mustache = require("mustache"),
+    argv     = require('yargs')
+    .help('h')
+    .alias('h', 'help')
+    .option('t', {
+        alias : 'test',
+        describe: 'Run gulp in the test environment',
+        type: 'boolean'
+    }).argv;
 
-var defaultConfig = {
-    colors: {
-      src: [
-        path.join(process.cwd(), "src/colors/**/*.js"),
-        "!" + path.join(process.cwd(), "src/colors/colors.js")
-      ],
-      fn: path.join(process.cwd(), "src/colors/colors.js")
-    },
-    mustache: {
-      src: path.join(process.cwd(), "src/itg.flat.mustache"),
-      dest: process.cwd()
-    }
-  };
+var baseTemplateFn = require(path.join(process.cwd(), "src/base-template-data.js")),
+    compilerFn     = require(path.join(process.cwd(), "src/compiler.js"));
+
+var log = gutil.log;
+
+if (argv.test) {
+  var outputDir = path.join(process.cwd() + '/test/tmp/');
+  // Prevent gulp from outputting messages while running in test
+  var gutil = require('gulp-util');
+  gutil.log = gutil.noop;
+  gutil.log = function() { return this; };
+}
+
+
+var config = {
+  colorFiles: path.join(process.cwd(), "src/themes/colors/*.js"),
+  themeFiles: path.join(process.cwd(), "src/themes/*.js"),
+  mustache: {
+    src: path.join(process.cwd(), "src/itg.flat.mustache"),
+    dest: outputDir || process.cwd()
+  }
+};
 
 var compiler = {
 
-  baseData: function(filepath) {
-    var dirpath = path.dirname(filepath);
-    if (this.colorFileName(dirpath) === 'colors') return {};
-    return require(path.join(dirpath, 'base.js'));
+  themes: function() {
+    return glob.sync(config.themeFiles);
   },
 
-  colorData: function(filepath) {
-    return require(filepath);
-  },
-
-  parentDir: function(filepath) {
-    var dirpath = path.dirname(filepath);
-    return _.last(dirpath.split(path.sep));
+  colors: function() {
+    return glob.sync(config.colorFiles);
   },
 
   colorFileName: function(filepath) {
     return path.basename(filepath, '.js');
   },
 
-  composeName: function(filepath) {
+  composeName: function(filepath, themeName) {
+    var themeName = this.colorFileName(themeName);
     var colorName = ('.' + this.colorFileName(filepath))
       .replace('.base', '');
 
-    return 'itg.flat.' +
-           this.parentDir(filepath) +
+    return ('itg.flat.' +
+           themeName +
            colorName +
-           '.sublime-theme';
+           '.sublime-theme').replace('.undefined', '');
   },
 
-  exec: function(config, cb) {
-    var log = gutil.log
-    if (cb) { log = function(){}; }
-    config = _.merge(defaultConfig, config);
+  buildTheme: function(file, themeName, next) {
+
+    var colors = require(file),
+        theme  = require(themeName || file),
+        templateData = compilerFn(baseTemplateFn, theme, (colors.defaultColors || colors)),
+        newName = compiler.composeName(file, themeName),
+        fileDest = path.join(config.mustache.dest, newName);
+
+    log("  " + newName);
+
+    var template = fs.readFileSync(config.mustache.src, {encoding: 'utf-8'});
+    var stream = fs.createWriteStream(fileDest);
+    stream.once('open', function(fd) {
+      stream.write(Mustache.render(template, templateData));
+      stream.end();
+    });
+    stream.on('close', function() {
+      if (next) next();
+    });
+  },
+
+  exec: function(done) {
+
+    if (argv.test) { log = function(){}; }
 
     log("Generating: ");
-    return gulp.src(config.colors.src)
-    .pipe(tap(function(file, t) {
-      var base = compiler.baseData(file.path);
-      var data = compiler.colorData(file.path);
-      var newName = compiler.composeName(file.path);
-      var colors = require(config.colors.fn)(base, data || {});
 
-      log("  " + newName);
+    async.each(compiler.themes(), function(theme, next) {
 
-      gulp.src(config.mustache.src)
-      .pipe(mustache(colors))
-      .pipe(rename(newName))
-      .pipe(gulp.dest(config.mustache.dest));
-    })
-    .on('end', function() {
-      if (cb) { cb(); }
-    }));
+      // build base theme
+      compiler.buildTheme(theme, undefined, function() {
+
+        // build theme color variations
+        async.each(compiler.colors(), function(file, next) {
+          compiler.buildTheme(file, theme, next);
+        }, next);
+      });
+    }, done);
+
   }
-
 };
 
-gulp.task('compile', compiler.exec);
+gulp.task('compile', ['clean'], compiler.exec);
+gulp.task('clean', function(done) {
+  del(path.join(config.mustache.dest, '*.sublime-theme'), done)
+});
 gulp.task('default', ['compile']);
 
 module.exports = compiler;
