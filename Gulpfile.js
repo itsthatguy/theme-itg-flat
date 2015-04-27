@@ -50,7 +50,7 @@ var compiler = {
   },
 
   colorFileName: function(filepath) {
-    return (path.basename(filepath, '.js') || 'foo');
+    return path.basename(filepath, '.js');
   },
 
   composeName: function(filepath, themeName) {
