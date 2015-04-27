@@ -103,4 +103,17 @@ or add this to your `Preferences.sublime-settings` file:
 
 ## Contributing
 
-Please read the [contributors' guide](CONTRIBUTING.md)
+1. fork this repo
+2. run `npm install`
+3. edit the existing `src/colors/**/*.js` files or create a new one
+4. run `gulp compile`
+5. run `npm test` and verify all the tests are passing
+6. submit a pull request to the development branch
+
+> Note: If adding anything to `itg.flat.mustache` make sure to also add those updates to the files in the `test/templates/` folder.
+
+## Tests
+
+1. fork this repo
+2. run `npm install`
+3. run `npm test`
