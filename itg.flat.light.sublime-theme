@@ -1013,7 +1013,7 @@
   {
     "class": "icon_highlight",
     "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
-    "layer0.tint": [255, 255, 255, 200]
+    "layer0.tint": 
   },
   {
       "class": "icon_file_type",
