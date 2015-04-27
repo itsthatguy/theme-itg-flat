@@ -673,14 +673,11 @@
     "class": "icon_folder_loading",
     "content_margin": [0,0]
   },
-
-  //          STATE HIDDEN 1
   {
       "class": "icon_folder",
       "settings" : ["itg_hide_folders"],
       "content_margin" : [0,0]
   },
-  //          STATE HIDDEN 2
   {
       "class": "icon_file_type",
       "settings" : ["itg_show_file_icons"],
@@ -689,13 +686,13 @@
   },
   {
     "class": "icon_folder",
-    "layer0.texture": "{{iconPath}}{{iconPathGroup}}{{icons.sidebarGroupClosed}}",
+    "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}{{{icons.sidebarGroupClosed}}}",
     "content_margin": [8,5]
   },
   {
     "class": "icon_folder",
     "parents": [{"attributes": ["expanded"]}],
-    "layer0.texture": "{{iconPath}}{{iconPathGroup}}{{icons.sidebarGroupOpen}}",
+    "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}{{{icons.sidebarGroupOpen}}}",
     "content_margin": [8,5]
   },
 
@@ -1143,24 +1140,18 @@
   {
     "class": "icon_highlight",
     "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
-<<<<<<< HEAD
     "layer0.tint": {{{sidebarSettings.hover.textColor}}}
-=======
-    "layer0.tint": {{sidebarSettings.hover.textColor}}
   },
   {
       "class": "icon_file_type",
-      // layer0.texture is filled in by code with the relevant icon name
       "layer0.opacity": 1.0,
       "content_margin": 0
   },
-  //          STATE HIDDEN 1
   {
       "class": "icon_folder",
       "settings" : ["itg_hide_folders"],
-      "content_margin" : 0
+      "content_margin" : [0, 0]
   },
-  //          STATE HIDDEN 2
   {
       "class": "icon_file_type",
       "settings" : ["itg_show_file_icons"],
@@ -1169,18 +1160,17 @@
   },
   {
     "class": "icon_folder",
-    "layer0.texture": "{{iconPath}}{{iconPathGroup}}{{icons.sidebarGroupClosed}}",
+    "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}{{{icons.sidebarGroupClosed}}}",
     "content_margin": [8,5]
   },
   {
     "class": "icon_folder",
     "parents": [{"attributes": ["expanded"]}],
-    "layer0.texture": "{{iconPath}}{{iconPathGroup}}{{icons.sidebarGroupOpen}}",
+    "layer0.texture": "{{{iconPath}}}{{{iconPathGroup}}}{{{icons.sidebarGroupOpen}}}",
     "content_margin": [8,5]
   },
   {
     "class": "icon_folder_loading",
     "content_margin": [0,0]
->>>>>>> updated main file of colors
   }
 ]

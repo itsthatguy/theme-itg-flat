@@ -33,7 +33,7 @@
   {
     "class": "tab_control",
     "settings": ["show_tab_close_buttons"],
-    "content_margin": [20, 0, 10, 1]
+    "content_margin": [20, 0, 10, 1] 
   },
 
 
@@ -584,8 +584,34 @@
     "content_margin": [0,0]
   },
   {
+    "class": "icon_folder",
+    "content_margin": [0,0]
+  },
+  {
     "class": "icon_folder_loading",
     "content_margin": [0,0]
+  },
+  {
+      "class": "icon_folder",
+      "settings" : ["itg_hide_folders"],
+      "content_margin" : [0,0]
+  },
+  {
+      "class": "icon_file_type",
+      "settings" : ["itg_show_file_icons"],
+      "content_margin" : [8, 8],
+      "layer0.opacity" : 1.0
+  },
+  {
+    "class": "icon_folder",
+    "layer0.texture": "Theme - itg.flat/assets/group-closed.png",
+    "content_margin": [8,5]
+  },
+  {
+    "class": "icon_folder",
+    "parents": [{"attributes": ["expanded"]}],
+    "layer0.texture": "Theme - itg.flat/assets/group-open.png",
+    "content_margin": [8,5]
   },
 
   {
@@ -678,13 +704,13 @@
     "class": "overlay_control",
     "layer0.texture": "",
     "layer0.tint": [65, 69, 78],
-    "layer0.inner_margin": [30, 30, 30, 30],
+    "layer0.inner_margin": [30, 30, 30, 30], 
     "layer0.opacity": 1.0,
     "layer1.texture": "",
     "layer1.tint": [65, 69, 78],
     "layer1.inner_margin": [20, 40, 20, 20],
     "layer1.opacity": 1.0,
-    "content_margin": [0, 0, 0, 0]
+    "content_margin": [0, 0, 0, 0] 
   },
   {
     "class": "overlay_control",
@@ -989,13 +1015,16 @@
     "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
     "layer0.tint": [255, 255, 255, 200]
   },
-  //          STATE HIDDEN 1
+  {
+      "class": "icon_file_type",
+      "layer0.opacity": 1.0,
+      "content_margin": 0
+  },
   {
       "class": "icon_folder",
       "settings" : ["itg_hide_folders"],
-      "content_margin" : [0,0]
+      "content_margin" : [0, 0]
   },
-  //          STATE HIDDEN 2
   {
       "class": "icon_file_type",
       "settings" : ["itg_show_file_icons"],
@@ -1012,5 +1041,9 @@
     "parents": [{"attributes": ["expanded"]}],
     "layer0.texture": "Theme - itg.flat/assets/group-open.png",
     "content_margin": [8,5]
+  },
+  {
+    "class": "icon_folder_loading",
+    "content_margin": [0,0]
   }
 ]
