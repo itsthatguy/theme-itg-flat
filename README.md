@@ -85,6 +85,8 @@ or add this to your `Preferences.sublime-settings` file:
 "itg_sidebar_tree_large": true
 "itg_sidebar_tree_xlarge": true
 
+// Sidebar File Icons (default)
+"itg_show_file_icons": false
 
 // Scrollbar size options
 "itg_scrollbar_small": true
