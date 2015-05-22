@@ -33,7 +33,7 @@
   {
     "class": "tab_control",
     "settings": ["show_tab_close_buttons"],
-    "content_margin": [20, 0, 10, 1] 
+    "content_margin": [20, 0, 10, 1]
   },
 
 
@@ -77,7 +77,11 @@
     "fg": [91, 84, 81, 255],
     "font.bold" : false
   },
-
+  {
+    "class": "tab_label",
+    "attributes": ["transient"],
+    "font.italic": true
+  },
   {
     "class": "tab_close_button",
     "content_margin": [10, 0],
@@ -682,13 +686,13 @@
     "class": "overlay_control",
     "layer0.texture": "",
     "layer0.tint": [65, 69, 78],
-    "layer0.inner_margin": [30, 30, 30, 30], 
+    "layer0.inner_margin": [30, 30, 30, 30],
     "layer0.opacity": 1.0,
     "layer1.texture": "",
     "layer1.tint": [65, 69, 78],
     "layer1.inner_margin": [20, 40, 20, 20],
     "layer1.opacity": 1.0,
-    "content_margin": [0, 0, 0, 0] 
+    "content_margin": [0, 0, 0, 0]
   },
   {
     "class": "overlay_control",
