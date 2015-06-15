@@ -77,7 +77,11 @@
     "fg": [91, 84, 81, 255],
     "font.bold" : false
   },
-
+  {
+    "attributes": ["transient"],
+    "class": "tab_label",
+    "font.italic": true
+  },
   {
     "class": "tab_close_button",
     "content_margin": [10, 0],
