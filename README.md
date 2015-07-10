@@ -42,7 +42,7 @@ To enable the theme and adjust theme settings edit your `Preferences.sublime-set
 ```javascript
 // for a dark theme use:
 "theme": "itg.flat.dark.sublime-theme"
- 
+
 // for a light theme use:
 "theme": "itg.flat.light.sublime-theme"
 
@@ -52,6 +52,13 @@ To enable the theme and adjust theme settings edit your `Preferences.sublime-set
 "theme": "itg.flat.dark.green.sublime-theme"
 "theme": "itg.flat.dark.orange.sublime-theme"
 "theme": "itg.flat.dark.yellow.sublime-theme"
+
+// additional (light) color options
+"theme": "itg.flat.light.aqua.sublime-theme"
+"theme": "itg.flat.light.blue.sublime-theme"
+"theme": "itg.flat.light.green.sublime-theme"
+"theme": "itg.flat.light.orange.sublime-theme"
+"theme": "itg.flat.light.yellow.sublime-theme"
 ```
 
 
@@ -77,7 +84,7 @@ or add this to your `Preferences.sublime-settings` file:
 ```javascript
 // small tabs
 "itg_small_tabs": true
- 
+
 // Sidebar padding options
 "itg_sidebar_tree_xsmall": true
 "itg_sidebar_tree_small": true
@@ -96,4 +103,17 @@ or add this to your `Preferences.sublime-settings` file:
 
 ## Contributing
 
-Please read the [contributors' guide](CONTRIBUTING.md)
+1. fork this repo
+2. run `npm install`
+3. edit the existing `src/colors/**/*.js` files or create a new one
+4. run `gulp compile`
+5. run `npm test` and verify all the tests are passing
+6. submit a pull request to the development branch
+
+> Note: If adding anything to `itg.flat.mustache` make sure to also add those updates to the files in the `test/templates/` folder.
+
+## Tests
+
+1. fork this repo
+2. run `npm install`
+3. run `npm test`
