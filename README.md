@@ -99,6 +99,10 @@ or add this to your `Preferences.sublime-settings` file:
 
 // if the scrollbar options aren't working, try setting the following
 "overlay_scroll_bars": "disabled"
+
+// these are the default values
+"itg_show_file_icons": false
+"itg_hide_folders": false
 ```
 
 ## Contributing

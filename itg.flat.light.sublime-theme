@@ -595,6 +595,28 @@
     "class": "icon_folder_loading",
     "content_margin": [0,0]
   },
+  {
+      "class": "icon_folder",
+      "settings" : ["itg_hide_folders"],
+      "content_margin" : [0,0]
+  },
+  {
+      "class": "icon_file_type",
+      "settings" : ["itg_show_file_icons"],
+      "content_margin" : [8, 8],
+      "layer0.opacity" : 1.0
+  },
+  {
+    "class": "icon_folder",
+    "layer0.texture": "Theme - itg.flat/assets/group-closed.png",
+    "content_margin": [8,5]
+  },
+  {
+    "class": "icon_folder",
+    "parents": [{"attributes": ["expanded"]}],
+    "layer0.texture": "Theme - itg.flat/assets/group-open.png",
+    "content_margin": [8,5]
+  },
 
   {
     "class": "disclosure_button_control",
@@ -995,6 +1017,37 @@
   {
     "class": "icon_highlight",
     "parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
-    "layer0.tint": [255, 255, 255, 200]
+    "layer0.tint": 
+  },
+  {
+      "class": "icon_file_type",
+      "layer0.opacity": 1.0,
+      "content_margin": 0
+  },
+  {
+      "class": "icon_folder",
+      "settings" : ["itg_hide_folders"],
+      "content_margin" : [0, 0]
+  },
+  {
+      "class": "icon_file_type",
+      "settings" : ["itg_show_file_icons"],
+      "content_margin" : [8, 8],
+      "layer0.opacity" : 1.0
+  },
+  {
+    "class": "icon_folder",
+    "layer0.texture": "Theme - itg.flat/assets/group-closed.png",
+    "content_margin": [8,5]
+  },
+  {
+    "class": "icon_folder",
+    "parents": [{"attributes": ["expanded"]}],
+    "layer0.texture": "Theme - itg.flat/assets/group-open.png",
+    "content_margin": [8,5]
+  },
+  {
+    "class": "icon_folder_loading",
+    "content_margin": [0,0]
   }
 ]
