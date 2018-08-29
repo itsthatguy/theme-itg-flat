@@ -542,7 +542,7 @@
 			<key>name</key>
 			<string>diff.deleted</string>
 			<key>scope</key>
-			<string>Markdown.deleted</string>
+			<string>Markdown.deleted, markup.deleted</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -553,7 +553,7 @@
 			<key>name</key>
 			<string>diff.inserted</string>
 			<key>scope</key>
-			<string>Markdown.inserted</string>
+			<string>Markdown.inserted, markup.inserted</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -564,7 +564,7 @@
 			<key>name</key>
 			<string>diff.changed</string>
 			<key>scope</key>
-			<string>Markdown.changed</string>
+			<string>Markdown.changed, markup.changed</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
